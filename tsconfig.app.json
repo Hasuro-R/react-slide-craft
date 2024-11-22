@@ -10,7 +10,7 @@
     /* Bundler mode */
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "./types.ts",
+    "declarationDir": "./dist",
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
