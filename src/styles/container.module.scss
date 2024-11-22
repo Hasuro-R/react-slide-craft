@@ -1,0 +1,12 @@
+.cn {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  font-size: calc(100vw / 100);
+  font-weight: 500;
+  background-color: #000000;
+}
