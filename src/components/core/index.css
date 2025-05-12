@@ -1,0 +1,28 @@
+/* SlideCore */
+.core-cn {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-black);
+}
+
+/* SlideFrame */
+.frame-cn {
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  .template-cn {
+    width: auto;
+    height: 100vh;
+  }
+}
+
