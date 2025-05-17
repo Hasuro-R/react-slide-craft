@@ -21,6 +21,6 @@ export const useFontSize = () => {
     const fontSize = FONT_SIZE_MAP[variable as FontSizeVariant] ?? Number(variable) ?? 16;
     const fontSizeRatio = fontSize / 16;
 
-    return `calc(${fontSizeRatio} * (100vw / 100))`;
+    return `calc(${fontSizeRatio} * (150vw / 100))`;
   }
 }
