@@ -1,0 +1,21 @@
+.slide-btn-cn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.slide-btn-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.slide-btn-index span {
+  font-size: 12px;
+  padding: 0 4px;
+}

@@ -1,4 +1,6 @@
 import { useEffect, useState, JSX } from "react";
+import { isMobile } from "react-device-detect";
+import { SlideButton } from "../button";
 import "./index.css";
 
 export type SlidCoreProps = {
@@ -14,6 +16,18 @@ export const SlideCore = (props: SlidCoreProps) => {
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const CurrentSlide = slides[currentSlideIndex] || defaultSlide;
+
+  const handleBack = () => {
+    if (currentSlideIndex !== 0) {
+      setCurrentSlideIndex(currentSlideIndex - 1);
+    }
+  }
+
+  const handleNext = () => {
+    if (currentSlideIndex !== slides.length - 1) {
+      setCurrentSlideIndex(currentSlideIndex + 1);
+    }
+  }
 
   const handleKeyDown = (e: { code: any; }) => {
     const key = e.code;
@@ -40,6 +54,17 @@ export const SlideCore = (props: SlidCoreProps) => {
   return (
     <div className="core-cn">
       <CurrentSlide />
+      {isMobile && (
+        <div className="core-slide-btn-cn">
+          <SlideButton
+            currentNumber={currentSlideIndex + 1}
+            totalCount={slides.length}
+            isShowIndex
+            handleBack={handleBack}
+            handleNext={handleNext}
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,31 @@
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+button:disabled:hover {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.circle-btn {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 100vh;
+  background-color: var(--bg-color-pale);
+  opacity: 0.9;
+}
+
+.circle-btn:hover {
+  opacity: 1;
+}
