@@ -1,13 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { SlideCore, SlideFrame } from "../../components/core";
-import { CustomText } from "../../components/text/CustomText";
+import { SlideCore, SlideFrame } from "../../components/core"
+import { CustomText } from "../../components/text/CustomText"
 
 const slides = [
-  () => <SlideFrame><CustomText size="base" text="hello |world|! I'm |fan||aa" highlightColor="red" /></SlideFrame>,
+  () => (
+    <SlideFrame>
+      <CustomText
+        size="base"
+        text="hello |world|! I'm |fan||aa"
+        highlightColor="red"
+      />
+    </SlideFrame>
+  ),
   () => <SlideFrame>b</SlideFrame>,
   () => <SlideFrame>c</SlideFrame>,
-  () => <SlideFrame>d</SlideFrame>,
-];
+  () => <SlideFrame>d</SlideFrame>
+]
 
 export default {
   title: "Components/SlideCore",
@@ -18,6 +26,5 @@ export default {
 } satisfies Meta<typeof SlideCore>
 
 export const Default: StoryObj<typeof SlideCore> = {
-  args: {
-  }
+  args: {}
 }

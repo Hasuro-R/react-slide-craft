@@ -1,2 +1,2 @@
-export * from "./SlideCore";
-export * from "./SlideFrame";
+export * from "./SlideCore"
+export * from "./SlideFrame"

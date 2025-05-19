@@ -4,11 +4,11 @@ import arrowLeft from "../../../assets/arrow-left.svg"
 import "./index.css"
 
 export type SlideButtonProps = {
-  currentNumber: number;
-  totalCount: number;
-  isShowIndex?: boolean;
-  handleBack: () => void;
-  handleNext: () => void;
+  currentNumber: number
+  totalCount: number
+  isShowIndex?: boolean
+  handleBack: () => void
+  handleNext: () => void
 }
 
 export const SlideButton = (props: SlideButtonProps) => {
@@ -17,8 +17,8 @@ export const SlideButton = (props: SlideButtonProps) => {
     totalCount,
     isShowIndex = false,
     handleBack,
-    handleNext,
-  } = props;
+    handleNext
+  } = props
 
   return (
     <div className="slide-btn-cn">
@@ -29,7 +29,9 @@ export const SlideButton = (props: SlideButtonProps) => {
       />
       {isShowIndex && (
         <p className="slide-btn-index">
-          {currentNumber}<span>/</span>{totalCount}
+          {currentNumber}
+          <span>/</span>
+          {totalCount}
         </p>
       )}
       <CommonCircleButton
@@ -38,5 +40,5 @@ export const SlideButton = (props: SlideButtonProps) => {
         isDisabled={currentNumber === totalCount}
       />
     </div>
-  );
+  )
 }

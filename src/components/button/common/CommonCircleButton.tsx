@@ -2,10 +2,10 @@ import { JSX } from "react"
 import "./index.css"
 
 export type CommonCircleButtonProps = {
-  backgroundColor?: string | null;
-  icon?: JSX.Element | null;
-  isDisabled?: boolean;
-  onClick: () => void;
+  backgroundColor?: string | null
+  icon?: JSX.Element | null
+  isDisabled?: boolean
+  onClick: () => void
 }
 
 export const CommonCircleButton = (props: CommonCircleButtonProps) => {
@@ -14,7 +14,7 @@ export const CommonCircleButton = (props: CommonCircleButtonProps) => {
     icon,
     isDisabled = false,
     onClick,
-  } = props;
+  } = props
 
   return (
     <button
@@ -25,5 +25,5 @@ export const CommonCircleButton = (props: CommonCircleButtonProps) => {
     >
       {icon}
     </button>
-  );
+  )
 }

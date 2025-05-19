@@ -1,34 +1,35 @@
-import { useFontSize } from "../../hooks/useFontSize";
-import { ParseText } from "./ParseText";
+import React from "react"
+import { useFontSize } from "../../hooks/useFontSize"
+import { ParseText } from "./ParseText"
 
 export type BaseTextProps = {
   // text
-  text: string;
+  text: string
 
   // text class name
-  className?: string | undefined;
+  className?: string | undefined
 
   // text custom style
-  style?: React.CSSProperties | undefined;
+  style?: React.CSSProperties | undefined
 
   // highlight text color
-  highlightColor?: string | undefined;
+  highlightColor?: string | undefined
 
   // highlight text font size
-  highlightFontSize?: string | undefined;
+  highlightFontSize?: string | undefined
 
   // highlight text font weight
-  highlightFontWeight?: string | undefined;
+  highlightFontWeight?: string | undefined
 
   // highlight text custom class name
-  highlightClassName?: string | undefined;
+  highlightClassName?: string | undefined
 
   // highlight text custom style
-  highlightStyle?: React.CSSProperties | undefined;
+  highlightStyle?: React.CSSProperties | undefined
 }
 
 export type CustomTextProps = BaseTextProps & {
-  size?: string | undefined;
+  size?: string | undefined
 }
 
 export const CustomText = (props: CustomTextProps) => {
@@ -41,10 +42,10 @@ export const CustomText = (props: CustomTextProps) => {
     highlightFontSize,
     highlightFontWeight = "bold",
     highlightClassName = "",
-    highlightStyle,
-  } = props;
+    highlightStyle
+  } = props
 
-  const fontSize = useFontSize();
+  const fontSize = useFontSize()
 
   return (
     <p
@@ -58,9 +59,9 @@ export const CustomText = (props: CustomTextProps) => {
           ...highlightStyle,
           color: highlightColor,
           fontSize: fontSize(highlightFontSize ?? size ?? "base"),
-          fontWeight: highlightFontWeight,
+          fontWeight: highlightFontWeight
         }}
       />
     </p>
-  );
+  )
 }
