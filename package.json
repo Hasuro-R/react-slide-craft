@@ -1,11 +1,10 @@
 {
   "name": "react-slide-craft",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.1.0",
   "type": "module",
   "files": [
-    "index.ts",
-    "index.d.ts"
+    "dist"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -14,10 +13,12 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint --fix"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
+    "@eslint/js": "^9.27.0",
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-onboarding": "^8.6.14",
     "@storybook/blocks": "^8.6.14",
@@ -30,10 +31,17 @@
     "@vitejs/plugin-react": "^4.4.1",
     "@vitest/browser": "^3.1.3",
     "@vitest/coverage-v8": "^3.1.3",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.1.0",
     "playwright": "^1.52.0",
+    "prettier": "^3.5.3",
     "react-device-detect": "^2.2.3",
     "storybook": "^8.6.14",
     "typescript": "~5.7.3",
+    "typescript-eslint": "^8.32.1",
     "vite": "^6.1.1",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.1.3"
