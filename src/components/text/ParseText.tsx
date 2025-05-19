@@ -1,7 +1,9 @@
+import React from "react"
+
 export type ParseTextProps = {
-  text: string;
-  spanClassName?: string | undefined;
-  spanStyle?: React.CSSProperties | undefined;
+  text: string
+  spanClassName?: string | undefined
+  spanStyle?: React.CSSProperties | undefined
 }
 
 export const ParseText = (props: ParseTextProps) => {
@@ -9,23 +11,21 @@ export const ParseText = (props: ParseTextProps) => {
     text,
     spanClassName,
     spanStyle,
-  } = props;
+  } = props
 
-  const parts = text.split('|');
+  const parts = text.split("|")
 
   return (
     <>
       {parts.map((part, index) =>
-        (index % 2 === 1 && index < parts.length - 1) ? (
-          <span
-            className={spanClassName}
-            style={spanStyle}
-            key={index}
-          >
+        index % 2 === 1 && index < parts.length - 1 ? (
+          <span className={spanClassName} style={spanStyle} key={index}>
             {part}
           </span>
-        ) : part
+        ) : (
+          part
+        )
       )}
     </>
-  );
+  )
 }

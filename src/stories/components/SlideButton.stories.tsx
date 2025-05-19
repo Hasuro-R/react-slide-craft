@@ -8,20 +8,19 @@ export default {
   args: {
     totalCount: 5,
     handleNext: fn(),
-    handleBack: fn(),
+    handleBack: fn()
   }
 } satisfies Meta<typeof SlideButton>
 
 export const Default: StoryObj<typeof SlideButton> = {
   args: {
-    currentNumber: 1,
+    currentNumber: 1
   }
 }
 
 export const Disabled: StoryObj<typeof SlideButton> = {
   args: {
     isShowIndex: true,
-    currentNumber: 5,
+    currentNumber: 5
   }
 }
-
