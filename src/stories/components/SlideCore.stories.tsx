@@ -4,17 +4,21 @@ import { CustomText } from "../../components/text/CustomText"
 
 const slides = [
   () => (
-    <SlideFrame>
+    <>
       <CustomText
         size="base"
-        text="hello |world|! I'm |fan||aa"
+        text="hello |world|!"
         highlightColor="red"
       />
-    </SlideFrame>
+      <CustomText
+        size="base"
+        text="happy happy happy"
+      />
+    </>
   ),
   () => <SlideFrame>b</SlideFrame>,
-  () => <SlideFrame>c</SlideFrame>,
-  () => <SlideFrame>d</SlideFrame>
+  () => <>c</>,
+  () => <>d</>
 ]
 
 export default {
@@ -27,4 +31,15 @@ export default {
 
 export const Default: StoryObj<typeof SlideCore> = {
   args: {}
+}
+
+export const SetBaseFrame: StoryObj<typeof SlideCore> = {
+  args: {
+    isShowSlideButtonAlways: true,
+    baseSlideFrameStyle: {
+      backgroundColor: "aqua",
+      textColor: "white",
+      cornerRadius: 20,
+    },
+  }
 }
