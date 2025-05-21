@@ -22,7 +22,7 @@ button:disabled:hover {
   padding: 16px;
   font-size: 16px;
   border-radius: 100vh;
-  background-color: var(--bg-color-pale);
+  background-color: var(--rsc-bg-color-pale);
   opacity: 0.9;
 }
 

@@ -1,6 +1,7 @@
 import React from "react"
 import { useFontSize } from "../../hooks/useFontSize"
 import { ParseText } from "./ParseText"
+import "./index.css"
 
 export type BaseTextProps = {
   // text
@@ -49,7 +50,7 @@ export const CustomText = (props: CustomTextProps) => {
 
   return (
     <p
-      className={className}
+      className={`${className} rsc-base-text`}
       style={{ ...style, fontSize: fontSize(size ?? "base") }}
     >
       <ParseText
