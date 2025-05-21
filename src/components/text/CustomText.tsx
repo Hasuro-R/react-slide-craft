@@ -50,7 +50,7 @@ export const CustomText = (props: CustomTextProps) => {
 
   return (
     <p
-      className={`${className} rsc-base-text`}
+      className={className}
       style={{ ...style, fontSize: fontSize(size ?? "base") }}
     >
       <ParseText

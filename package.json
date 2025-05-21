@@ -1,8 +1,9 @@
 {
   "name": "react-slide-craft",
   "private": false,
-  "version": "0.2.9",
+  "version": "0.3.0",
   "type": "module",
+  "description": "Library for creating slides in React.",
   "files": [
     "dist"
   ],
@@ -13,6 +14,16 @@
     "name": "HASURO",
     "url": "https://hasuro.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hasuro-R/react-slide-craft"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-library",
+    "slide"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
