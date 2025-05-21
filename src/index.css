@@ -1,10 +1,14 @@
+/* @import url("./components/index.css"); */
+
 :root {
-  --color-black: #000000;
-  --color-white: #ffffff;
+  --rsc-color-black: #000000;
+  --rsc-color-white: #ffffff;
 
-  --bg-color-pale: #edefee;
+  --rsc-text-color-primary: #000000;
 
-  --z-index-menu: 1000;
+  --rsc-bg-color-pale: #edefee;
+
+  --rsc-z-index-menu: 1000;
 }
 
 * {
