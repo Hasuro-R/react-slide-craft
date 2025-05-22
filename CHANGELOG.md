@@ -1,5 +1,13 @@
 # react-slide-craft
 
+## 0.3.2
+
+### Patch Changes
+
+- [#20](https://github.com/Hasuro-R/react-slide-craft/pull/20) [`ff439cf`](https://github.com/Hasuro-R/react-slide-craft/commit/ff439cfa2da51201859928939ab129eb639e166c) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - fix: release package
+
+- [#19](https://github.com/Hasuro-R/react-slide-craft/pull/19) [`ec9ec37`](https://github.com/Hasuro-R/react-slide-craft/commit/ec9ec375a36154b513b1a4be7decd45edaa8fc83) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - fix: release.yml
+
 ## 0.3.1
 
 ### Patch Changes

@@ -2,7 +2,7 @@
   "name": "react-slide-craft",
   "private": false,
   "access": "public",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "type": "module",
   "description": "Library for creating slides in React.",
   "files": [
