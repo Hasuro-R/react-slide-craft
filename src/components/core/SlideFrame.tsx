@@ -14,6 +14,9 @@ export type BaseSlideFrameProps = {
   // Slide Background Color
   backgroundColor?: string | undefined
 
+  // Slide Background Image
+  backgroundImage?: string | undefined
+
   // Slide Padding
   // ex) "10" or "10 20" or "10 20 30 40"
   padding?: string | undefined
@@ -33,6 +36,7 @@ export const SlideFrame = (props: SlideFrameProps) => {
     children,
     textColor = "var(--rsc-text-color)",
     backgroundColor = "var(--rsc-color-white)",
+    backgroundImage,
     padding = "",
     cornerRadius = 0,
     backgroundClassName = "",
@@ -50,6 +54,7 @@ export const SlideFrame = (props: SlideFrameProps) => {
         ...backgroundStyle,
         color: textColor,
         backgroundColor: backgroundColor,
+        backgroundImage: backgroundImage,
         paddingTop: fontSize(paddingT),
         paddingRight: fontSize(paddingR),
         paddingBottom: fontSize(paddingB),
