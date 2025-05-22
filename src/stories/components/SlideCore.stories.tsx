@@ -12,7 +12,7 @@ const slides = [
       />
       <CustomText
         size="base"
-        text="happy happy happy"
+        text="happy |happy| happy"
       />
     </>
   ),
