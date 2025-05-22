@@ -7,6 +7,12 @@ export type BaseTextProps = {
   // text
   text: string
 
+  // text color
+  color?: string | undefined
+
+  // text font weight
+  weight?: string | undefined
+
   // text class name
   className?: string | undefined
 
@@ -36,7 +42,9 @@ export type CustomTextProps = BaseTextProps & {
 export const CustomText = (props: CustomTextProps) => {
   const {
     text,
+    color,
     size,
+    weight,
     className = "",
     style,
     highlightColor = "",
@@ -51,7 +59,12 @@ export const CustomText = (props: CustomTextProps) => {
   return (
     <p
       className={className}
-      style={{ ...style, fontSize: fontSize(size ?? "base") }}
+      style={{
+        ...style,
+        color: color,
+        fontWeight: weight,
+        fontSize: fontSize(size ?? "base")
+      }}
     >
       <ParseText
         text={text}

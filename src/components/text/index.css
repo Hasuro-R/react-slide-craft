@@ -1,3 +1,12 @@
 .rsc-base-text {
   color: var(--rsc-text-color-primary);
 }
+
+.rsc-block-quote {
+  display: block;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  unicode-bidi: isolate;
+  padding: 2px 0 2px .7em;
+  border-left: 3px solid var(--rsc-bg-color-pale);
+}
