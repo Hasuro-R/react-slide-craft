@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 0.3.3
+
+### Patch Changes
+
+- [#23](https://github.com/Hasuro-R/react-slide-craft/pull/23) [`d4e04b6`](https://github.com/Hasuro-R/react-slide-craft/commit/d4e04b6ee8dacd577d68f02d72033f64142a239e) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - fix: hilight
+
 ## 0.3.2
 
 ### Patch Changes
