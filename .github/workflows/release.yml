@@ -16,22 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
       - name: Install Dependencies Before Release
         run: npm install --frozen-lockfile
 
-      - name: Run Build Before Release
-        run: npm run build
+      - name: Create .npmrc
+        run: |
+          echo "@Hasuro-R:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
 
       - name: Create Release PR or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          version: npm run changeset-version
-          publish: npm run changeset-publish
+          publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
