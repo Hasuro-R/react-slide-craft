@@ -1,8 +1,9 @@
 import { useEffect, useState, JSX } from "react"
 import { isMobile } from "react-device-detect"
 import { SlideButton } from "../button"
+import { SlideFrame } from "./SlideFrame"
+import { SlideBase, SlideBaseCoreProps } from "./BaseSlide"
 import "./index.css"
-import { BaseSlideFrameProps, SlideFrame } from "./SlideFrame"
 
 export type SlidCoreProps = {
   // Array of slides to display
@@ -13,7 +14,7 @@ export type SlidCoreProps = {
 
   // Base Slide Frame
   // Set the SlideFrame on which your customized slides will be based
-  baseSlideFrameStyle?: BaseSlideFrameProps | undefined
+  baseSlideFrameStyle?: SlideBaseCoreProps | undefined
 
   // Background color for the slide container
   backgroundColor?: string
@@ -73,8 +74,14 @@ export const SlideCore = (props: SlidCoreProps) => {
       className="core-cn"
       style={{ backgroundColor: backgroundColor }}
     >
-      <SlideFrame {...baseSlideFrameStyle}>
-        <CurrentSlide />
+      <SlideFrame>
+        <SlideBase
+          {...baseSlideFrameStyle}
+          textColor={baseSlideFrameStyle?.textColor ?? "var(--rsc-color-black)"}
+          backgroundColor={baseSlideFrameStyle?.backgroundColor ?? "var(--rsc-color-white)"}
+        >
+          <CurrentSlide />
+        </SlideBase>
       </SlideFrame>
       {(isMobile || isShowSlideButtonAlways) && (
         <div className="core-slide-btn-cn">

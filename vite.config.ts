@@ -2,9 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
-import { peerDependencies } from './package.json'
-
-const dependenciesKeys = Object.keys(peerDependencies).map((key) => key)
 
 export default defineConfig({
   plugins: [
@@ -24,7 +21,7 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      external: [...dependenciesKeys, 'react/jsx-runtime'],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
     },
   },
 })

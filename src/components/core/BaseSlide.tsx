@@ -3,11 +3,11 @@ import { useFontSize } from "../../hooks/useFontSize"
 import { getPaddings } from "../../utils/getPaddings"
 import "./index.css"
 
-export type SlideFrameProps = BaseSlideFrameProps & {
+export type SlideBaseProps = SlideBaseCoreProps & {
   children: React.ReactNode
 }
 
-export type BaseSlideFrameProps = {
+export type SlideBaseCoreProps = {
   // Slide Text Color
   textColor?: string | undefined
 
@@ -31,7 +31,7 @@ export type BaseSlideFrameProps = {
   backgroundStyle?: React.CSSProperties | undefined
 }
 
-export const SlideFrame = (props: SlideFrameProps) => {
+export const SlideBase = (props: SlideBaseProps) => {
   const {
     children,
     textColor = "",
@@ -49,7 +49,7 @@ export const SlideFrame = (props: SlideFrameProps) => {
 
   return (
     <div
-      className={`frame-cn ${backgroundClassName}`}
+      className={`base-slide-cn ${backgroundClassName}`}
       style={{
         ...backgroundStyle,
         color: textColor,
