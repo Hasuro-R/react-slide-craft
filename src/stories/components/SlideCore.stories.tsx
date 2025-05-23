@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { SlideCore, SlideFrame } from "../../components/core"
+import { SlideCore } from "../../components/core"
 import { CustomText } from "../../components/text/CustomText"
+import { SlideBase } from "../../components/core/BaseSlide"
 
 const slides = [
   () => (
@@ -16,7 +17,7 @@ const slides = [
       />
     </>
   ),
-  () => <SlideFrame>b</SlideFrame>,
+  () => <SlideBase backgroundColor="white" textColor="black">b</SlideBase>,
   () => <>c</>,
   () => <>d</>
 ]
@@ -40,6 +41,7 @@ export const SetBaseFrame: StoryObj<typeof SlideCore> = {
       backgroundColor: "aqua",
       textColor: "white",
       cornerRadius: 20,
+      padding: "20",
     },
   }
 }
