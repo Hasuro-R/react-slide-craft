@@ -2,6 +2,9 @@ import type { Meta, StoryObj } from "@storybook/react"
 import { SlideCore } from "../../components/core"
 import { CustomText } from "../../components/text/CustomText"
 import { SlideBase } from "../../components/core/SlideBase"
+import { CoverSlideTemplate } from "../../components/templates/CoverSlideTemplate"
+import { TitleAndBodySlideTemplate } from "../../components/templates/TitleAndBodySlideTemplate"
+import { TitleWithBgAndBodySlideTemplate } from "../../components/templates/TitleWithBgAndBodySlideTemplate"
 
 const slides = [
   () => (
@@ -18,8 +21,9 @@ const slides = [
     </>
   ),
   () => <SlideBase backgroundColor="white" textColor="black">b</SlideBase>,
-  () => <>c</>,
-  () => <>d</>
+  () => <CoverSlideTemplate title="Cover Slide Title\nHello" subTitle="HASURO" align="center" subTitleColor="gray" />,
+  () => <TitleAndBodySlideTemplate title="Hello">d</TitleAndBodySlideTemplate>,
+  () => <TitleWithBgAndBodySlideTemplate title="Hello">d</TitleWithBgAndBodySlideTemplate>,
 ]
 
 export default {

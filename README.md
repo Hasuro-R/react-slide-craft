@@ -94,6 +94,11 @@ const CustomSlideTemplate = ({
 - SlideCore
 - SlideBase
 
+### Templates
+- CoverSlideTemplate
+- TitleAndBodySlideTemplate
+- TitleWithBgAndBodySlideTemplate
+
 ### Items
 - List
 - CustomText

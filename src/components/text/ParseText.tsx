@@ -13,6 +13,31 @@ export const ParseText = (props: ParseTextProps) => {
     spanStyle,
   } = props
 
+  const lines = text.replace(/\\n/g, "\n").split("\n")
+
+  return (
+    <>
+      {lines.map((line, index) => (
+        <React.Fragment key={index}>
+          <HighlightParseText
+            spanClassName={spanClassName}
+            spanStyle={spanStyle}
+            text={line}
+          />
+          <br />
+        </React.Fragment>
+      ))}
+    </>
+  )
+}
+
+const HighlightParseText = (props: ParseTextProps) => {
+  const {
+    text,
+    spanClassName,
+    spanStyle,
+  } = props
+
   const parts = text.split("|")
 
   return (

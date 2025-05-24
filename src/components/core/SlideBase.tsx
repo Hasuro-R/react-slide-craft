@@ -11,6 +11,9 @@ export type SlideBaseCoreProps = {
   // Slide Text Color
   textColor?: string | undefined
 
+  // Slide text font
+  fontFamily?: string | undefined
+
   // Slide Background Color
   backgroundColor?: string | undefined
 
@@ -35,6 +38,7 @@ export const SlideBase = (props: SlideBaseProps) => {
   const {
     children,
     textColor = "",
+    fontFamily,
     backgroundColor = "",
     backgroundImage,
     padding = "",
@@ -53,6 +57,7 @@ export const SlideBase = (props: SlideBaseProps) => {
       style={{
         ...backgroundStyle,
         color: textColor,
+        fontFamily: fontFamily,
         backgroundColor: backgroundColor,
         backgroundImage: backgroundImage,
         paddingTop: fontSize(paddingT),

@@ -1,0 +1,56 @@
+/* CoverSlide */
+.rsc-cover-cn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TitleAndBody */
+.rsc-t-a-b-cn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsc-t-a-b-body-cn {
+  width: 100%;
+  min-height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TitleWithBgAndBody */
+.rsc-t-bg-a-b-cn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rsc-t-bg-a-b-title-cn {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--rsc-bg-color-pale);
+}
+
+.rsc-t-bg-a-b-body-cn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

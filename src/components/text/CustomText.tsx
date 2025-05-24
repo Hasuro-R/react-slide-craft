@@ -13,6 +13,12 @@ export type BaseTextProps = HighlightTextProps & {
   // text font weight
   weight?: string | undefined
 
+  // text align
+  align?: React.CSSProperties["textAlign"] | undefined
+
+  // text font
+  fontFamily?: string | undefined
+
   // text class name
   className?: string | undefined
 
@@ -47,6 +53,8 @@ export const CustomText = (props: CustomTextProps) => {
     color,
     size,
     weight,
+    align = "left",
+    fontFamily,
     className = "",
     style,
     highlightColor = "",
@@ -75,7 +83,9 @@ export const CustomText = (props: CustomTextProps) => {
           ...highlightStyle,
           color: highlightColor,
           fontSize: fontSize(highlightFontSize ?? size ?? "base"),
-          fontWeight: highlightFontWeight
+          fontWeight: highlightFontWeight,
+          textAlign: align,
+          fontFamily: fontFamily,
         }}
       />
     </p>
