@@ -43,7 +43,7 @@ export const TextComponentPlayground: StoryObj<typeof SlideFrame> = {
         <TitleText text="hello こんちは" />
         <SubTitleText text="hello こんちは" />
         <SectionTitleText text="hello こんちは" />
-        <BodyText text="これは|ReactSlideCraft|の|BodyText|ですよ" />
+        <BodyText text="これは|ReactSlideCraft|の|BodyText|ですよ\n改行できます" />
         <CaptionText text="hello こんちは" />
         <QuoteText text="hello 引用してます" />
       </>
@@ -78,8 +78,9 @@ export const ListComponentPlayground: StoryObj<typeof SlideFrame> = {
         <List
           items={items}
           defaultFontSize="2xl"
+          textColor="gray"
           lineHeight={1.9}
-          listMarker="number"
+          listMarker="dot"
           listItemHighlight={{highlightColor: "red"}}
         />
       </SlideBase>

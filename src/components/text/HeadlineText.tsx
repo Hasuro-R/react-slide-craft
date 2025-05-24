@@ -6,7 +6,7 @@ export const HeadlineText = (props: HeadlineTextProps) => {
   return (
     <CustomText
       {...props}
-      size="7xl"
+      size="6xl"
       weight="700"
     />
   )

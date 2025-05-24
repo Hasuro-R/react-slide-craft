@@ -1,6 +1,8 @@
 /* @import url("./components/index.css"); */
 
 :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
   --rsc-color-black: #000000;
   --rsc-color-white: #ffffff;
 
