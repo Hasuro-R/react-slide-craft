@@ -2,7 +2,7 @@ import { useEffect, useState, JSX } from "react"
 import { isMobile } from "react-device-detect"
 import { SlideButton } from "../button"
 import { SlideFrame } from "./SlideFrame"
-import { SlideBase, SlideBaseCoreProps } from "./BaseSlide"
+import { SlideBase, SlideBaseCoreProps } from "./SlideBase"
 import "./index.css"
 
 export type SlidCoreProps = {

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { CustomText, SlideFrame } from "../../components"
+import { CustomText, List, SlideBase, SlideFrame } from "../../components"
 import { TitleText } from "../../components/text/TitleText"
 import { SubTitleText } from "../../components/text/SubTitleText"
 import { HeadlineText } from "../../components/text/HeadlineText"
@@ -47,6 +47,42 @@ export const TextComponentPlayground: StoryObj<typeof SlideFrame> = {
         <CaptionText text="hello こんちは" />
         <QuoteText text="hello 引用してます" />
       </>
+    ),
+    textColor: "black",
+    backgroundColor: "white",
+    backgroundStyle: {
+      border: "1px solid black",
+    },
+    cornerRadius: 5,
+  }
+}
+
+const items = [
+  "1",
+  "/1",
+  "//1",
+  "///1",
+  "|1|",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+]
+
+export const ListComponentPlayground: StoryObj<typeof SlideFrame> = {
+  args: {
+    children: (
+      <SlideBase>
+        <HeadlineText text={items.length.toString()} />
+        <List
+          items={items}
+          defaultFontSize="2xl"
+          lineHeight={1.9}
+          listMarker="number"
+          listItemHighlight={{highlightColor: "red"}}
+        />
+      </SlideBase>
     ),
     textColor: "black",
     backgroundColor: "white",
