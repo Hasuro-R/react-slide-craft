@@ -8,7 +8,7 @@ import globals from "globals"
 export default defineConfig([
   tseslint.config(
     {
-      ignores: ["**/node_modules/**", "**/dist", "**/.storybook", "**/*.{workspace.ts,config.ts}"],
+      ignores: ["**/node_modules/**", "**/dist", "**/.storybook", "**/*.{workspace.ts,config.ts}", "**/examples"],
     },
     {
       files: ["**/*.{ts,tsx}"],

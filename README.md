@@ -95,6 +95,7 @@ const CustomSlideTemplate = ({
 - SlideBase
 
 ### Items
+- List
 - CustomText
 
 ### Texts
