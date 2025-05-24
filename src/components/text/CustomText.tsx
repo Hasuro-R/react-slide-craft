@@ -3,7 +3,7 @@ import { useFontSize } from "../../hooks/useFontSize"
 import { ParseText } from "./ParseText"
 import "./index.css"
 
-export type BaseTextProps = {
+export type BaseTextProps = HighlightTextProps & {
   // text
   text: string
 
@@ -18,7 +18,9 @@ export type BaseTextProps = {
 
   // text custom style
   style?: React.CSSProperties | undefined
+}
 
+export type HighlightTextProps = {
   // highlight text color
   highlightColor?: string | undefined
 
