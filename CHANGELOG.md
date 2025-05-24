@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 0.5.0
+
+### Minor Changes
+
+- [#37](https://github.com/Hasuro-R/react-slide-craft/pull/37) [`f472b3b`](https://github.com/Hasuro-R/react-slide-craft/commit/f472b3b6394529a6677f731663455a46f7ffd070) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Create List Component
+
 ## 0.4.0
 
 ### Minor Changes
