@@ -200,6 +200,7 @@ const ListMarker = ({
             style={{
               width: fontSize / 3,
               backgroundColor: tabNum !== 3 ? color : "",
+              borderColor: color,
             }}
           />
         )}
