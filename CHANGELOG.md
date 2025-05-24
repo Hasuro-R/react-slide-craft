@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 0.6.0
+
+### Minor Changes
+
+- [#42](https://github.com/Hasuro-R/react-slide-craft/pull/42) [`dd6eef6`](https://github.com/Hasuro-R/react-slide-craft/commit/dd6eef62e37a8a2f340e4f4c8c6569b45c79913c) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - create slide template
+
 ## 0.5.1
 
 ### Patch Changes
