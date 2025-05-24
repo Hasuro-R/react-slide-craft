@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { SlideCore } from "../../components/core"
 import { CustomText } from "../../components/text/CustomText"
-import { SlideBase } from "../../components/core/BaseSlide"
+import { SlideBase } from "../../components/core/SlideBase"
 
 const slides = [
   () => (
