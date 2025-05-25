@@ -10,11 +10,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
       - name: Install Dependencies
         run: npm install --frozen-lockfile
 
       - name: Run Lint
         run: npm run lint
+
+      - name: Run Tests
+        run: npm run test
 
       - name: Run Build
         run: npm run build
