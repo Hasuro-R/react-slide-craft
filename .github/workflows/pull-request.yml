@@ -17,9 +17,6 @@ jobs:
       - name: Install Dependencies
         run: npm install --frozen-lockfile
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
       - name: Run Lint
         run: npm run lint
 
