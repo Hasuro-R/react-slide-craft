@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.0.0
+
+### Major Changes
+
+- [#48](https://github.com/Hasuro-R/react-slide-craft/pull/48) [`5587b66`](https://github.com/Hasuro-R/react-slide-craft/commit/5587b66099166db457a8ca3dfe6dbd1780755f1b) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Create SlideObject
+
 ## 0.6.1
 
 ### Patch Changes
