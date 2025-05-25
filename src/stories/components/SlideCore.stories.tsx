@@ -5,6 +5,8 @@ import { SlideBase } from "../../components/core/SlideBase"
 import { CoverSlideTemplate } from "../../components/templates/CoverSlideTemplate"
 import { TitleAndBodySlideTemplate } from "../../components/templates/TitleAndBodySlideTemplate"
 import { TitleWithBgAndBodySlideTemplate } from "../../components/templates/TitleWithBgAndBodySlideTemplate"
+import { genSlideObject } from "../../utils/slideObject"
+import { TitleText } from "../../components"
 
 const slides = [
   () => (
@@ -24,6 +26,7 @@ const slides = [
   () => <CoverSlideTemplate title="Cover Slide Title\nHello" subTitle="HASURO" align="center" subTitleColor="gray" />,
   () => <TitleAndBodySlideTemplate title="Hello">d</TitleAndBodySlideTemplate>,
   () => <TitleWithBgAndBodySlideTemplate title="Hello">d</TitleWithBgAndBodySlideTemplate>,
+  genSlideObject(() => <TitleText text="Not Base Style" color="white" />),
 ]
 
 export default {

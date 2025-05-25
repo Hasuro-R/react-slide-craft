@@ -1,13 +1,14 @@
-import { useEffect, useState, JSX } from "react"
+import React, { useEffect, useState, JSX } from "react"
 import { isMobile } from "react-device-detect"
 import { SlideButton } from "../button"
 import { SlideFrame } from "./SlideFrame"
 import { SlideBase, SlideBaseCoreProps } from "./SlideBase"
 import "./index.css"
+import { isJSXElementFunction, renderSlideComponent } from "../../utils/slideObject"
 
 export type SlidCoreProps = {
   // Array of slides to display
-  slides: (() => JSX.Element)[]
+  slides: Slide[]
 
   // Default slide to show when no slides are available
   defaultSlide?: () => JSX.Element
@@ -23,6 +24,17 @@ export type SlidCoreProps = {
   isShowSlideButtonAlways?: boolean
 }
 
+export type Slide = (() => JSX.Element) | SlideObject
+
+export type SlideObject = {
+  render: () => JSX.Element
+  options?: SlideObjectOptions
+}
+
+export type SlideObjectOptions = {
+  isBaseStyle?: boolean
+}
+
 export const SlideCore = (props: SlidCoreProps) => {
   const {
     slides,
@@ -33,7 +45,27 @@ export const SlideCore = (props: SlidCoreProps) => {
   } = props
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
-  const CurrentSlide = slides[currentSlideIndex] || defaultSlide
+
+  const CurrentSlide = renderSlideComponent(slides[currentSlideIndex]) || defaultSlide
+  const RootSlideBase = ({ children } : { children: React.ReactNode }) => {
+    const slide = slides[currentSlideIndex]
+    if (slide) {
+      if (isJSXElementFunction(slide) || (slides[currentSlideIndex] as SlideObject).options?.isBaseStyle) {
+        return (
+          <SlideBase
+            {...baseSlideFrameStyle}
+            textColor={baseSlideFrameStyle?.textColor ?? "var(--rsc-color-black)"}
+            backgroundColor={baseSlideFrameStyle?.backgroundColor ?? "var(--rsc-color-white)"}
+          >
+            {children}
+          </SlideBase>
+        )
+      } else {
+        return <SlideBase>{children}</SlideBase>
+      }
+    }
+    return <SlideBase>{children}</SlideBase>
+  }
 
   const handleBack = () => {
     if (currentSlideIndex !== 0) {
@@ -75,13 +107,9 @@ export const SlideCore = (props: SlidCoreProps) => {
       style={{ backgroundColor: backgroundColor }}
     >
       <SlideFrame>
-        <SlideBase
-          {...baseSlideFrameStyle}
-          textColor={baseSlideFrameStyle?.textColor ?? "var(--rsc-color-black)"}
-          backgroundColor={baseSlideFrameStyle?.backgroundColor ?? "var(--rsc-color-white)"}
-        >
+        <RootSlideBase>
           <CurrentSlide />
-        </SlideBase>
+        </RootSlideBase>
       </SlideFrame>
       {(isMobile || isShowSlideButtonAlways) && (
         <div className="core-slide-btn-cn">
