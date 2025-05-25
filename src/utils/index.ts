@@ -1,1 +1,1 @@
-export * from "./generateBaseSlideFrame"
+export { genSlideObject } from './slideObject'

@@ -89,6 +89,22 @@ const CustomSlideTemplate = ({
 }
 ```
 
+If you do not want to apply some of the base styles defined in `SlideCore` when applying your own slides, add objects created with `genSlideObject` to the array when passing to `slides` in `SlideCore` as shown below.
+```tsx
+const App = () => {
+  const slides = [
+    ComponentA,
+    genSlideObject(CustomSlide) // Toggle base style with options isBaseStyle
+  ]
+
+  return (
+    <SlideCore
+      slides={slides}
+    />
+  )
+}
+```
+
 ## Components
 ### Core
 - SlideCore
