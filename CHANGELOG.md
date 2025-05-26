@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.1.1
+
+### Patch Changes
+
+- [#66](https://github.com/Hasuro-R/react-slide-craft/pull/66) [`4cead52`](https://github.com/Hasuro-R/react-slide-craft/commit/4cead52fe8f5e4bed8f58e49edefbe043bd3f5d4) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Feature/publish container and define border
+
 ## 1.1.0
 
 ### Minor Changes
