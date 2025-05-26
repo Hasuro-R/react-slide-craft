@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.0.1
+
+### Patch Changes
+
+- [#55](https://github.com/Hasuro-R/react-slide-craft/pull/55) [`a13a20d`](https://github.com/Hasuro-R/react-slide-craft/commit/a13a20ddef969cd371a93ff637a5cddb0e6cb8c7) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - feat: create style components
+
 ## 1.0.0
 
 ### Major Changes
