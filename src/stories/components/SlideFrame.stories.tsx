@@ -3,7 +3,7 @@ import { CustomText, List, SlideBase, SlideFrame } from "../../components"
 import { TitleText } from "../../components/text/TitleText"
 import { SubTitleText } from "../../components/text/SubTitleText"
 import { HeadlineText } from "../../components/text/HeadlineText"
-import { BodyText } from "../../components/text/BodyText"
+import { BodyText, BoldBodyText } from "../../components/text/BodyText"
 import { SectionTitleText } from "../../components/text/SectionTitleText"
 import { CaptionText } from "../../components/text/CaptionText"
 import { QuoteText } from "../../components/text/QuoteText"
@@ -44,6 +44,7 @@ export const TextComponentPlayground: StoryObj<typeof SlideFrame> = {
         <SubTitleText text="hello こんちは" />
         <SectionTitleText text="hello こんちは" />
         <BodyText text="これは|ReactSlideCraft|の|BodyText|ですよ\n改行できます" />
+        <BoldBodyText text="これは|ReactSlideCraft|の|BodyText|ですよ\n改行できます" />
         <CaptionText text="hello こんちは" />
         <QuoteText text="hello 引用してます" />
       </>
