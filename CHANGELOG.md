@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.0.2
+
+### Patch Changes
+
+- [#57](https://github.com/Hasuro-R/react-slide-craft/pull/57) [`d28971c`](https://github.com/Hasuro-R/react-slide-craft/commit/d28971c168784f5c26f5acf2661047479389a94d) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Chore/fix text component
+
 ## 1.0.1
 
 ### Patch Changes
