@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.1.0
+
+### Minor Changes
+
+- [#63](https://github.com/Hasuro-R/react-slide-craft/pull/63) [`5b08acd`](https://github.com/Hasuro-R/react-slide-craft/commit/5b08acdce9eede080558230aa3f572d6a73cb4d8) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Update text components highlight fontsize
+
 ## 1.0.2
 
 ### Patch Changes
