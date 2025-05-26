@@ -6,13 +6,14 @@ import { CoverSlideTemplate } from "../../components/templates/CoverSlideTemplat
 import { TitleAndBodySlideTemplate } from "../../components/templates/TitleAndBodySlideTemplate"
 import { TitleWithBgAndBodySlideTemplate } from "../../components/templates/TitleWithBgAndBodySlideTemplate"
 import { genSlideObject } from "../../utils/slideObject"
-import { TitleText } from "../../components"
+import { Image, Row, TitleText } from "../../components"
 
 const slides = [
   () => (
-    <>
-      <CustomText
-        size="base"
+    <Row width="100%" height="100%" align="center" crossAlign="center" gap="xl">
+      <Image src="../../../assets/arrow-left.svg" alt="allow" width="30%" />
+      <Image src="../../../assets/arrow-left.svg" alt="allow" width="30" />
+      <TitleText
         text="hello |world|!"
         highlightColor="red"
       />
@@ -20,7 +21,11 @@ const slides = [
         size="base"
         text="happy |happy| happy"
       />
-    </>
+      <CustomText
+        size="base"
+        text="happy |happy| happy"
+      />
+    </Row>
   ),
   () => <SlideBase backgroundColor="white" textColor="black">b</SlideBase>,
   () => <CoverSlideTemplate title="Cover Slide Title\nHello" subTitle="HASURO" align="center" subTitleColor="gray" />,
