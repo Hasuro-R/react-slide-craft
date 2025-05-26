@@ -7,6 +7,7 @@ import { BodyText, BoldBodyText } from "../../components/text/BodyText"
 import { SectionTitleText } from "../../components/text/SectionTitleText"
 import { CaptionText } from "../../components/text/CaptionText"
 import { QuoteText } from "../../components/text/QuoteText"
+import { Container } from "../../components/container/Container"
 
 export default {
   title: "Components/SlideFrame",
@@ -92,5 +93,26 @@ export const ListComponentPlayground: StoryObj<typeof SlideFrame> = {
       border: "1px solid black",
     },
     cornerRadius: 5,
+  }
+}
+
+export const ContainerPlayground: StoryObj<typeof SlideFrame> = {
+  args: {
+    children: (
+      <>
+        <Container
+          width="auto"
+          cornerRadius={2000}
+          border={{
+            color: "white",
+            width: 5,
+            style: "solid",
+          }}
+          containerStyle={{ aspectRatio: "1/1" }}
+        >
+          a
+        </Container>
+      </>
+    ),
   }
 }

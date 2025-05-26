@@ -3,7 +3,7 @@ import { useFontSize } from "../../hooks/useFontSize"
 import { getPaddings } from "../../utils/getPaddings"
 
 export type ContainerProps = ContainerBaseProps & {
-  direction: "row" | "column"
+  direction?: "row" | "column"
 }
 
 export type ContainerBaseProps = {
@@ -18,17 +18,25 @@ export type ContainerBaseProps = {
   minWidth?: string
   minHeight?: string
   cornerRadius?: number
+  border?: BorderOptions | undefined
+  containerStyle?: React.CSSProperties | undefined
   children?: React.ReactNode
 }
 
 export type Align = "start" | "center" | "end"
 
+export type BorderOptions = {
+  color?: string
+  width?: number
+  style?: React.CSSProperties["borderStyle"] | undefined
+}
+
 export const Container = (props: ContainerProps) => {
   const {
-    direction,
-    align = "start",
+    direction = "row",
+    align = "center",
     gap = "0",
-    crossAlign = "start",
+    crossAlign = "center",
     padding = "0",
     cornerRadius = 0,
     textColor = "",
@@ -37,7 +45,9 @@ export const Container = (props: ContainerProps) => {
     height = "100%",
     minWidth = "",
     minHeight = "",
+    border,
     children,
+    containerStyle = {},
   } = props
 
   const fs = useFontSize()
@@ -75,7 +85,9 @@ export const Container = (props: ContainerProps) => {
         minHeight: minHeight,
         color: textColor,
         backgroundColor: backgroundColor,
+        border: `${fs(border?.width?.toString() || "0")} ${border?.style || "solid"} ${border?.color || "transparent"}`,
         borderRadius: fs(`${cornerRadius}`),
+        ...containerStyle,
       }}
     >
       {children}
