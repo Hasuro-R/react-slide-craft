@@ -31,6 +31,7 @@ export type HighlightTextProps = {
   highlightColor?: string | undefined
 
   // highlight text font size
+  // Set the font size of highlight to 1.5x if you pass it in a format like *1.5
   highlightFontSize?: string | undefined
 
   // highlight text font weight
@@ -64,7 +65,19 @@ export const CustomText = (props: CustomTextProps) => {
     highlightStyle
   } = props
 
-  const fontSize = useFontSize()
+  const fs = useFontSize()
+
+  const parseMagnification = (str: string): number | undefined => {
+    const match = str.match(/^\*(\d+(\.\d+)?)/);
+    if (match) {
+      return parseFloat(match[1]);
+    }
+    return undefined;
+  }
+
+  const magnification = parseMagnification(highlightFontSize ?? "")
+  const fontSize = fs(size ?? "base")
+  const spanFontSize = magnification ? `calc(${fontSize} * ${magnification})` : fs(highlightFontSize ?? size ?? "base")
 
   return (
     <p
@@ -73,7 +86,7 @@ export const CustomText = (props: CustomTextProps) => {
         ...style,
         color: color,
         fontWeight: weight,
-        fontSize: fontSize(size ?? "base")
+        fontSize: fontSize,
       }}
     >
       <ParseText
@@ -82,7 +95,7 @@ export const CustomText = (props: CustomTextProps) => {
         spanStyle={{
           ...highlightStyle,
           color: highlightColor,
-          fontSize: fontSize(highlightFontSize ?? size ?? "base"),
+          fontSize: spanFontSize,
           fontWeight: highlightFontWeight,
           textAlign: align,
           fontFamily: fontFamily,
