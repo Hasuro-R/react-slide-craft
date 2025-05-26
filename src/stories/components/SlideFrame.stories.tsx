@@ -43,7 +43,7 @@ export const TextComponentPlayground: StoryObj<typeof SlideFrame> = {
         <TitleText text="hello こんちは" />
         <SubTitleText text="hello こんちは" />
         <SectionTitleText text="hello こんちは" />
-        <BodyText text="これは|ReactSlideCraft|の|BodyText|ですよ\n改行できます" />
+        <BodyText text="これは|ReactSlideCraft|の|BodyText|ですよ" highlightFontSize="*1.2" />
         <BoldBodyText text="これは|ReactSlideCraft|の|BodyText|ですよ\n改行できます" />
         <CaptionText text="hello こんちは" />
         <QuoteText text="hello 引用してます" />
