@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.2.0
+
+### Minor Changes
+
+- [#71](https://github.com/Hasuro-R/react-slide-craft/pull/71) [`8d31f41`](https://github.com/Hasuro-R/react-slide-craft/commit/8d31f416da2e78a6b467f0d5f1f9065a0543af41) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - create FloatContainer
+
 ## 1.1.1
 
 ### Patch Changes
