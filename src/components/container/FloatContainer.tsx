@@ -32,9 +32,9 @@ export const FloatContainer = (props: FloatContainerProps) => {
 
   return (
     <Container
-      {...props}
       width="auto"
       height="auto"
+      {...props}
       containerStyle={{
         ...props.containerStyle,
         position: "absolute",
