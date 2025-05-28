@@ -8,6 +8,7 @@ import { SectionTitleText } from "../../components/text/SectionTitleText"
 import { CaptionText } from "../../components/text/CaptionText"
 import { QuoteText } from "../../components/text/QuoteText"
 import { Container } from "../../components/container/Container"
+import { FloatContainer } from "../../components/container/FloatContainer"
 
 export default {
   title: "Components/SlideFrame",
@@ -99,7 +100,14 @@ export const ListComponentPlayground: StoryObj<typeof SlideFrame> = {
 export const ContainerPlayground: StoryObj<typeof SlideFrame> = {
   args: {
     children: (
-      <>
+      <SlideBase>
+        <FloatContainer
+          textColor="aqua"
+          right="30%"
+          containerStyle={{ color: "gray" }}
+        >
+          a
+        </FloatContainer>
         <Container
           width="auto"
           cornerRadius={2000}
@@ -112,7 +120,7 @@ export const ContainerPlayground: StoryObj<typeof SlideFrame> = {
         >
           a
         </Container>
-      </>
+      </SlideBase>
     ),
   }
 }
