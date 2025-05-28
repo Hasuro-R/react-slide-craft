@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.2.1
+
+### Patch Changes
+
+- [#74](https://github.com/Hasuro-R/react-slide-craft/pull/74) [`d700ed9`](https://github.com/Hasuro-R/react-slide-craft/commit/d700ed9b646518a929ee00251bb53be0b7db241a) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Fix FloatContainer props
+
 ## 1.2.0
 
 ### Minor Changes
