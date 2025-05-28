@@ -1,4 +1,5 @@
 import { useFontSize } from "../../hooks/useFontSize"
+import { checkPercentage } from "../../utils/checkPercentage"
 import "./index.css"
 
 export type ImageProps = {
@@ -18,18 +19,14 @@ export const Image = (props: ImageProps) => {
 
   const fs = useFontSize()
 
-  function isPercentage(val: string) {
-    return /^-?\d+(\.\d+)?%$/.test(val.trim());
-  }
-
   return (
     <img
       src={src}
       alt={alt}
       className="rsc-img"
       style={{
-        width: width ? (isPercentage(width) ? width : fs(width)) : "auto",
-        height: height ? (isPercentage(height) ? height : fs(height)) : "auto",
+        width: width ? (checkPercentage(width) ? width : fs(width)) : "auto",
+        height: height ? (checkPercentage(height) ? height : fs(height)) : "auto",
       }}
     />
   )
