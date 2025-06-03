@@ -1,3 +1,7 @@
+<p align='center'>
+  <img src="https://github.com/user-attachments/assets/67d62b2a-7bc4-4e1e-b59f-75d9c030e711" />
+</p>
+
 # React Slide Craft
 Library for creating slides in React.
 
