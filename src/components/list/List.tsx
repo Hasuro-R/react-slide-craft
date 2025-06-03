@@ -56,6 +56,8 @@ export const List = (props: ListProps) => {
     <Column
       align={align}
       crossAlign={crossAlign}
+      width="auto"
+      height="auto"
       gap={gap}
     >
       {items.map((item, index) => (
