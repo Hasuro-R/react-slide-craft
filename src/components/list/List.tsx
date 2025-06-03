@@ -45,7 +45,7 @@ export const List = (props: ListProps) => {
 
   const fs = useFontSize()
 
-  const fontSize = fs(textStyle?.size || "base")
+  const fontSize = fs(textStyle?.size || "xl")
   const textColor = textStyle?.color || ""
 
   const leadItemIndexArray = items.map((item, index) => ({ item, index }))
