@@ -8,6 +8,10 @@ import { useFontSize } from "../../hooks/useFontSize"
 export type ListProps = {
   items: ListItem[]
 
+  width?: string
+
+  height?: string
+
   gap?: string
 
   textStyle?: ListTextStyle
@@ -34,6 +38,8 @@ export type ListMarkerKind = "dot" | "number" | "none"
 export const List = (props: ListProps) => {
   const {
     items,
+    width = "auto",
+    height = "auto",
     gap = "base",
     textStyle,
     highlightTextStyle,
@@ -56,8 +62,8 @@ export const List = (props: ListProps) => {
     <Column
       align={align}
       crossAlign={crossAlign}
-      width="auto"
-      height="auto"
+      width={width}
+      height={height}
       gap={gap}
     >
       {items.map((item, index) => (
