@@ -23,7 +23,7 @@ export type ContainerBaseProps = {
   children?: React.ReactNode
 }
 
-export type Align = "start" | "center" | "end"
+export type Align = "start" | "center" | "end" | "between" | "around"
 
 export type BorderOptions = {
   color?: string
@@ -62,6 +62,10 @@ export const Container = (props: ContainerProps) => {
         return "center"
       case "end":
         return "flex-end"
+      case "between":
+        return "space-between"
+      case "around":
+        return "space-around"
       default:
         return "flex-start"
     }
