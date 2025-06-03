@@ -1,4 +1,5 @@
 import { useFontSize } from "../../hooks/useFontSize"
+import { checkPercentage } from "../../utils/checkPercentage"
 
 export type SpacerProps = {
   width?: string
@@ -13,8 +14,8 @@ export const Spacer = (props: SpacerProps) => {
 
   const fs = useFontSize()
 
-  const spacerWidth = width ? fs(width) : (height ? "" : "100%")
-  const spacerHeight = height ? fs(height) : (width ? "" : "100%")
+  const spacerWidth = width ? (checkPercentage(width) ? width : fs(width)) : (height ? "" : "100%")
+  const spacerHeight = height ? (checkPercentage(height) ? height : fs(height)) : (width ? "" : "100%")
 
   return (
     <div

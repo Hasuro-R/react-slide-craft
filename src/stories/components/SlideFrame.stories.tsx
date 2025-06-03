@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { CustomText, List, SlideBase, SlideFrame } from "../../components"
+import { CustomText, List, SlideBase, SlideFrame, Spacer } from "../../components"
 import { TitleText } from "../../components/text/TitleText"
 import { SubTitleText } from "../../components/text/SubTitleText"
 import { HeadlineText } from "../../components/text/HeadlineText"
@@ -80,6 +80,8 @@ export const ListComponentPlayground: StoryObj<typeof SlideFrame> = {
         <HeadlineText text={items.length.toString()} />
         <List
           items={items}
+          width="100%"
+          height="auto"
           textStyle={{
             size: "2xl",
             color: "gray",
@@ -112,8 +114,10 @@ export const ContainerPlayground: StoryObj<typeof SlideFrame> = {
         >
           a
         </FloatContainer>
+        <Spacer height="5xl" />
         <Container
           width="auto"
+          height="8xl"
           cornerRadius={2000}
           border={{
             color: "white",
