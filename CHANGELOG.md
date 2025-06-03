@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.3.2
+
+### Patch Changes
+
+- [#84](https://github.com/Hasuro-R/react-slide-craft/pull/84) [`552a9a0`](https://github.com/Hasuro-R/react-slide-craft/commit/552a9a0e4f26d2af48ce6b31106eb6a071b8651c) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Fix Component Size props
+
 ## 1.3.1
 
 ### Patch Changes
