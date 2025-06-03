@@ -80,11 +80,15 @@ export const ListComponentPlayground: StoryObj<typeof SlideFrame> = {
         <HeadlineText text={items.length.toString()} />
         <List
           items={items}
-          defaultFontSize="2xl"
-          textColor="gray"
-          lineHeight={1.9}
-          listMarker="dot"
-          listItemHighlight={{highlightColor: "red"}}
+          textStyle={{
+            size: "2xl",
+            color: "gray",
+          }}
+          highlightTextStyle={{
+            highlightColor: "red",
+          }}
+          marker="number"
+          markerColor="blue"
         />
       </SlideBase>
     ),

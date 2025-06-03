@@ -3,10 +3,12 @@ import { useFontSize } from "../../hooks/useFontSize"
 import { ParseText } from "./ParseText"
 import "./index.css"
 
-export type BaseTextProps = HighlightTextProps & {
+export type BaseTextProps = TextProps & HighlightTextProps & {
   // text
   text: string
+}
 
+export type TextProps = {
   // text color
   color?: string | undefined
 
