@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.3.1
+
+### Patch Changes
+
+- [#81](https://github.com/Hasuro-R/react-slide-craft/pull/81) [`a564278`](https://github.com/Hasuro-R/react-slide-craft/commit/a564278629d078d9186cac0d39fb0f751556e1b0) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Fix List style
+
 ## 1.3.0
 
 ### Minor Changes
