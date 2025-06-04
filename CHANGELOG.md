@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.3.3
+
+### Patch Changes
+
+- [#89](https://github.com/Hasuro-R/react-slide-craft/pull/89) [`23f008d`](https://github.com/Hasuro-R/react-slide-craft/commit/23f008d0aebfb1ad6ac3dd98242f9d956d440bc1) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Select show slide button index
+
 ## 1.3.2
 
 ### Patch Changes
