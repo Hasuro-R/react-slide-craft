@@ -49,6 +49,7 @@ export const Default: StoryObj<typeof SlideCore> = {
 export const SetBaseFrame: StoryObj<typeof SlideCore> = {
   args: {
     isShowSlideButtonAlways: true,
+    isShowSlideButtonIndex: false,
     baseSlideFrameStyle: {
       backgroundColor: "aqua",
       textColor: "white",

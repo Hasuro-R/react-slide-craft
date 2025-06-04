@@ -22,6 +22,8 @@ export type SlidCoreProps = {
 
   // show slide button in pc
   isShowSlideButtonAlways?: boolean
+
+  isShowSlideButtonIndex?: boolean
 }
 
 export type Slide = (() => JSX.Element) | SlideObject
@@ -42,6 +44,7 @@ export const SlideCore = (props: SlidCoreProps) => {
     baseSlideFrameStyle,
     backgroundColor = "var(--rsc-color-black)",
     isShowSlideButtonAlways = false,
+    isShowSlideButtonIndex = true,
   } = props
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
@@ -116,7 +119,7 @@ export const SlideCore = (props: SlidCoreProps) => {
           <SlideButton
             currentNumber={currentSlideIndex + 1}
             totalCount={slides.length}
-            isShowIndex
+            isShowIndex={isShowSlideButtonIndex}
             handleBack={handleBack}
             handleNext={handleNext}
           />
