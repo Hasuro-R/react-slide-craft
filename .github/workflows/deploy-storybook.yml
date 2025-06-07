@@ -5,15 +5,9 @@ on:
     branches:
       - main
 
-env:
-  WORKING_DIRECTORY: application
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ env.WORKING_DIRECTORY }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -21,9 +15,6 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: ${{ env.WORKING_DIRECTORY }}/package.json
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
           node-version: 18
 
       - name: Install Dependencies
@@ -35,7 +26,7 @@ jobs:
       - name: Upload Documents
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.WORKING_DIRECTORY }}/storybook-static
+          path: storybook-static
 
   deploy:
     needs: build
