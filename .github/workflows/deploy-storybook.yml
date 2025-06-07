@@ -26,7 +26,8 @@ jobs:
       - name: Upload Documents
         uses: actions/upload-pages-artifact@v3
         with:
-          path: storybook-static
+          path: storybook-static/
+          name: github-pages
 
   deploy:
     needs: build
