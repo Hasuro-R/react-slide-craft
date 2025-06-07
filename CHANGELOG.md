@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.3.4
+
+### Patch Changes
+
+- [#92](https://github.com/Hasuro-R/react-slide-craft/pull/92) [`e1bd90e`](https://github.com/Hasuro-R/react-slide-craft/commit/e1bd90e9f3d1b986ab32766db04dd857eb4b8222) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Fix useFontSize(adapt more variables)
+
 ## 1.3.3
 
 ### Patch Changes
