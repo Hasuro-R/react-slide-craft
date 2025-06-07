@@ -1,6 +1,5 @@
 import React from "react"
 import { Container, ContainerBaseProps } from "./Container"
-import { checkPercentage } from "../../utils/checkPercentage"
 import { useFontSize } from "../../hooks/useFontSize"
 
 export type FloatContainerProps = ContainerBaseProps & {
@@ -24,10 +23,7 @@ export const FloatContainer = (props: FloatContainerProps) => {
   const fs = useFontSize()
 
   const positionVal = (val: string | undefined): string => {
-    if (val) {
-      return checkPercentage(val) ? val : fs(val)
-    }
-    return ""
+    return val ? fs(val) : ""
   }
 
   return (

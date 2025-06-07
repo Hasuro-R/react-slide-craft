@@ -31,9 +31,25 @@ const FONT_SIZE_MAP: Record<FontSizeVariant, number> = {
   "9xl": 128
 }
 
+const returnFontSizeRatio = (fontSize: string): number => {
+  if (fontSize.endsWith("px")) {
+    const parseFontSize = parseFloat(fontSize.replace("px", ""))
+    const floatFontSize = Number.isNaN(parseFontSize) ? 16 : parseFontSize
+    return floatFontSize / 16
+  } else if (fontSize.endsWith("rem") || fontSize.endsWith("em")) {
+    const parseFontSize = parseFloat(fontSize.replace(/rem|em/, ""))
+    const floatFontSize = Number.isNaN(parseFontSize) ? 1 : parseFontSize
+    return floatFontSize
+  } else {
+    const parseFontSize =
+      FONT_SIZE_MAP[fontSize as FontSizeVariant] ?? Number(fontSize) ?? 16
+    return parseFontSize / 16
+  }
+}
+
 export const useFontSize = () => {
   const [isWideScreen, setIsWideScreen] = useState(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const ratio = window.innerWidth / window.innerHeight
       return ratio >= 16 / 9
     }
@@ -46,20 +62,21 @@ export const useFontSize = () => {
       setIsWideScreen(ratio >= 16 / 9)
     }
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   return (variable: string) => {
-    const fontSize =
-      FONT_SIZE_MAP[variable as FontSizeVariant] ?? Number(variable) ?? 16
-    const fontSizeRatio = fontSize / 16
+    const trimVariable = variable.trim()
+    if (trimVariable.endsWith("%") || trimVariable === "auto") {
+      return trimVariable
+    }
+    const fontSizeRatio = returnFontSizeRatio(trimVariable)
 
     if (isWideScreen) {
       return `calc(${fontSizeRatio} * (100vh / 37))`
     } else {
       return `calc(${fontSizeRatio} * (150vw / 100))`
     }
-
   }
 }

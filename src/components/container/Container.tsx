@@ -1,7 +1,6 @@
 import React from "react"
 import { useFontSize } from "../../hooks/useFontSize"
 import { getPaddings } from "../../utils/getPaddings"
-import { checkPercentage } from "../../utils/checkPercentage"
 
 export type ContainerProps = ContainerBaseProps & {
   direction?: "row" | "column"
@@ -72,16 +71,6 @@ export const Container = (props: ContainerProps) => {
     }
   }
 
-  const returnSize = (size: string): string => {
-    if (size === "auto") {
-      return "auto"
-    } else if (checkPercentage(size)) {
-      return size
-    } else {
-      return fs(size)
-    }
-  }
-
   return (
     <div
       style={{
@@ -94,8 +83,8 @@ export const Container = (props: ContainerProps) => {
         paddingRight: fs(paddingRight),
         paddingBottom: fs(paddingBottom),
         paddingLeft: fs(paddingLeft),
-        width: returnSize(width),
-        height: returnSize(height),
+        width: fs(width),
+        height: fs(height),
         minWidth: minWidth,
         minHeight: minHeight,
         color: textColor,
