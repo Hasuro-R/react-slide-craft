@@ -1,0 +1,42 @@
+name: "Deploy Storybook to GitHub Pages"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install --frozen-lockfile
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Upload Documents
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: /storybook-static
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v3
