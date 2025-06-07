@@ -21,6 +21,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
+          node-version-file: ${{ env.WORKING_DIRECTORY }}/package.json
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
           node-version: 18
 
       - name: Install Dependencies
