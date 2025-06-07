@@ -24,7 +24,7 @@ export const Default: StoryObj<typeof SlideFrame> = {
   args: {
     children: (
       <>
-        <CustomText text="Hello |World|!" highlightColor="red" />
+        <CustomText text="Hello |World|!" highlightColor="red" size="base" />
       </>
     ),
   }
@@ -110,7 +110,10 @@ export const ContainerPlayground: StoryObj<typeof SlideFrame> = {
         <FloatContainer
           textColor="aqua"
           right="30%"
-          containerStyle={{ color: "gray" }}
+          top="20%"
+          containerStyle={{
+            color: "gray"
+          }}
         >
           a
         </FloatContainer>
