@@ -1,0 +1,27 @@
+name: 'Chromatic Deployment'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  chromatic-deploy:
+    name: 'Chromatic Deployment'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install --frozen-lockfile
+
+      - uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
