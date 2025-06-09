@@ -106,6 +106,7 @@ const App = () => {
 ```
 
 ## Components
+Componentsの詳細は[こちらから](https://hasuro-r.github.io/react-slide-craft/?path=/docs/components-slidecore--docs)
 ### Core
 - SlideCore
 - SlideBase
