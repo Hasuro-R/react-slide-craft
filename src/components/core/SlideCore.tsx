@@ -15,7 +15,7 @@ export type SlidCoreProps = {
 
   // Base Slide Frame
   // Set the SlideFrame on which your customized slides will be based
-  baseSlideFrameStyle?: SlideBaseCoreProps | undefined
+  baseSlideStyle?: SlideBaseCoreProps | undefined
 
   // Background color for the slide container
   backgroundColor?: string
@@ -39,9 +39,9 @@ export type SlideObjectOptions = {
 
 export const SlideCore = (props: SlidCoreProps) => {
   const {
-    slides,
+    slides = [],
     defaultSlide = slides[0],
-    baseSlideFrameStyle,
+    baseSlideStyle,
     backgroundColor = "var(--rsc-color-black)",
     isShowSlideButtonAlways = false,
     isShowSlideButtonIndex = true,
@@ -56,9 +56,9 @@ export const SlideCore = (props: SlidCoreProps) => {
       if (isJSXElementFunction(slide) || (slides[currentSlideIndex] as SlideObject).options?.isBaseStyle) {
         return (
           <SlideBase
-            {...baseSlideFrameStyle}
-            textColor={baseSlideFrameStyle?.textColor ?? "var(--rsc-color-black)"}
-            backgroundColor={baseSlideFrameStyle?.backgroundColor ?? "var(--rsc-color-white)"}
+            {...baseSlideStyle}
+            textColor={baseSlideStyle?.textColor ?? "var(--rsc-color-black)"}
+            backgroundColor={baseSlideStyle?.backgroundColor ?? "var(--rsc-color-white)"}
           >
             {children}
           </SlideBase>
