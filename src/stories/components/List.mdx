@@ -1,0 +1,20 @@
+import { Markdown, Canvas, Controls, Meta, Story } from '@storybook/addon-docs/blocks'
+
+import * as List from "./List.stories"
+
+<Meta of={List} />
+
+# List
+`List`は、文字列の配列を渡すだけで簡単にListを作成できるコンポーネントです。
+
+## Usage
+`List`を使用するには文字列を渡すだけです。（文字列には`Text Components`と同じ独自の記法が使えます）
+
+また、`/`を文字列の頭につけるだけで、簡単にタブをいれて表示することができます。
+`/`の数によってタブのサイズが変わります。
+
+## Props
+<Canvas>
+<Story of={List.Default} />
+</Canvas>
+<Controls />
