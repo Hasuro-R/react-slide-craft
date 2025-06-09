@@ -37,7 +37,7 @@ export type ListMarkerKind = "dot" | "number" | "none"
 
 export const List = (props: ListProps) => {
   const {
-    items,
+    items = [],
     width = "auto",
     height = "auto",
     gap = "base",

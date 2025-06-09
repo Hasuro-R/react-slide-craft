@@ -1,0 +1,52 @@
+import { Markdown, Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as Texts from "./CustomText.stories"
+
+<Meta of={Texts} />
+
+# Text Components
+`React Slide Craft`では、スライドに表示するテキストには純正の`Text Components`を使用してください。
+そして、すべての`Text Components`は、この`CustomText`を継承しています。
+
+## Text Componentsの特徴
+`|`で文字列を囲うと、囲われた文字列が強調されます。また、強調される文字列に独自のスタイルをあてることができます。
+
+強調のスタイルで`highlightFontSize`という強調時のフォントサイズを指定するプロパティがありますが、`*`の後に数字を指定するとデフォルトのフォントサイズに指定した数値をかけたものを設定できます。(ex. `*1.1` → `size * 1.1`)
+
+また、`\n`で改行可能です。
+
+<Canvas of={Texts.Highlight} />
+
+### 指定可能なsize
+`size`はTextのfont sizeを指定するプロパティで、対応している単位は下記の通りです。（`px`指定は`px`なしでも指定可能です）
+- `px`
+- `rem`
+- `em`
+- `%`
+- `auto`
+
+また上記の単位で指定できる値以外に、指定できる独自の値があります。
+
+<Markdown>
+{`
+|値      |フォントサイズ(px)|
+|-------|-------|
+|xs     |12     |
+|sm     |14     |
+|base   |16     |
+|lg     |18     |
+|xl     |20     |
+|2xl    |24     |
+|3xl    |30     |
+|4xl    |36     |
+|5xl    |48     |
+|6xl    |60     |
+|7xl    |72     |
+|8xl    |96     |
+|9xl    |128    |
+`}
+</Markdown>
+
+### Props
+`Text Components`では基本下記のPropsを使用します。
+<Controls />

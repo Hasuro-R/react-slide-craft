@@ -1,0 +1,42 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as SlideCore from "./SlideCore.stories"
+
+<Meta of={SlideCore} />
+
+# SlideCore
+`SlideCore`はスライドの仕組みを提供する根幹のコンポーネントです。`SlideCore`にスライドの配列を渡すだけでWeb上にスライドを作成できます。
+
+## Usage
+`SlideCore`を使用するには、ページのトップで`SlideCore`を呼び出し、スライド（関数コンポーネント）の配列を渡すだけです。
+
+`SlideCore`の`slides`プロパティには、関数コンポーネントと`SlideObject`を渡すことができます。
+
+### `SlideObject`
+`SlideObject`は、スライドの情報をオブジェクトで表現したものです。以下のプロパティを持ちます。
+<Markdown>
+{`
+|Property   |Type                 |Description                           |
+|-----------|---------------------|---------------------------------------|
+|render      |() => JSX.Element    |スライドのコンポーネント                  |
+|isBaseStyle |boolean              |baseSlideStyleを適用するかどうかのフラグ   |
+`}
+</Markdown>
+
+そして`SlideObject`は下記のように定義できます。
+```tsx
+import { genSlideObject } from "react-slide-craft"
+
+const slideObject = genSlideObject(
+  ComponentA, // スライドのコンポーネント
+  {
+    isBaseStyle: true, // baseSlideStyleを適用するかどうか
+  },
+)
+```
+
+## Props
+<Canvas>
+<Story of={SlideCore.Default} />
+</Canvas>
+<Controls />
