@@ -19,8 +19,8 @@ export const Default: Story = {
   args: {
     children: (
       <>
-        <TitleText text="コンテナサンプル" size="xl" />
-        <BodyText text="このコンテンツはContainerコンポーネントでラップされています。" size="base" />
+        <TitleText text="コンテナサンプル" />
+        <BodyText text="このコンテンツはContainerコンポーネントでラップされています。" />
       </>
     ),
   },
@@ -30,10 +30,10 @@ export const MultipleElements: Story = {
   args: {
     children: (
       <>
-        <TitleText text="複数要素のコンテナ" size="2xl" />
-        <BodyText text="最初の段落です。" size="lg" />
-        <BodyText text="二番目の段落です。" size="lg" />
-        <BodyText text="三番目の段落です。" size="lg" />
+        <TitleText text="複数要素のコンテナ" />
+        <BodyText text="最初の段落です。" />
+        <BodyText text="二番目の段落です。" />
+        <BodyText text="三番目の段落です。" />
       </>
     ),
   },
@@ -43,9 +43,9 @@ export const NestedContainers: Story = {
   args: {
     children: (
       <>
-        <TitleText text="ネストされたコンテナ" size="xl" />
+        <TitleText text="ネストされたコンテナ" />
         <Container>
-          <BodyText text="内側のコンテナ内容" size="base" />
+          <BodyText text="内側のコンテナ内容" />
         </Container>
       </>
     ),

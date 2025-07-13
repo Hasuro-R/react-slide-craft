@@ -19,13 +19,13 @@ export const Default: Story = {
     children: (
       <>
         <div style={{ padding: '10px', backgroundColor: '#f0f0f0', margin: '5px' }}>
-          <BodyText text="上部" size="base" />
+          <BodyText text="上部" />
         </div>
         <div style={{ padding: '10px', backgroundColor: '#e0e0e0', margin: '5px' }}>
-          <BodyText text="中央" size="base" />
+          <BodyText text="中央" />
         </div>
         <div style={{ padding: '10px', backgroundColor: '#d0d0d0', margin: '5px' }}>
-          <BodyText text="下部" size="base" />
+          <BodyText text="下部" />
         </div>
       </>
     ),
@@ -37,10 +37,10 @@ export const TwoRows: Story = {
     children: (
       <>
         <div style={{ padding: '20px', backgroundColor: '#e3f2fd', margin: '5px' }}>
-          <BodyText text="上段（広い）" size="base" />
+          <BodyText text="上段（広い）" />
         </div>
         <div style={{ padding: '20px', backgroundColor: '#f3e5f5', margin: '5px' }}>
-          <BodyText text="下段（広い）" size="base" />
+          <BodyText text="下段（広い）" />
         </div>
       </>
     ),
@@ -52,10 +52,10 @@ export const UnequalRows: Story = {
     children: (
       <>
         <div style={{ padding: '30px', backgroundColor: '#fff3e0', margin: '5px' }}>
-          <BodyText text="メインコンテンツ（大きい）" size="lg" />
+          <BodyText text="メインコンテンツ（大きい）" />
         </div>
         <div style={{ padding: '10px', backgroundColor: '#f1f8e9', margin: '5px' }}>
-          <BodyText text="フッター（小さい）" size="sm" />
+          <BodyText text="フッター（小さい）" />
         </div>
       </>
     ),
@@ -67,19 +67,19 @@ export const MultipleItems: Story = {
     children: (
       <>
         <div style={{ padding: '8px', backgroundColor: '#ffebee', margin: '2px' }}>
-          <BodyText text="アイテム 1" size="sm" />
+          <BodyText text="アイテム 1" />
         </div>
         <div style={{ padding: '8px', backgroundColor: '#e8f5e8', margin: '2px' }}>
-          <BodyText text="アイテム 2" size="sm" />
+          <BodyText text="アイテム 2" />
         </div>
         <div style={{ padding: '8px', backgroundColor: '#e3f2fd', margin: '2px' }}>
-          <BodyText text="アイテム 3" size="sm" />
+          <BodyText text="アイテム 3" />
         </div>
         <div style={{ padding: '8px', backgroundColor: '#fff8e1', margin: '2px' }}>
-          <BodyText text="アイテム 4" size="sm" />
+          <BodyText text="アイテム 4" />
         </div>
         <div style={{ padding: '8px', backgroundColor: '#fce4ec', margin: '2px' }}>
-          <BodyText text="アイテム 5" size="sm" />
+          <BodyText text="アイテム 5" />
         </div>
       </>
     ),

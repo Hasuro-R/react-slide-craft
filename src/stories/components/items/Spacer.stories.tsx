@@ -21,9 +21,9 @@ export const Default: Story = {
   },
   render: (args) => (
     <div>
-      <TitleText text="タイトル" size="xl" />
+      <TitleText text="タイトル" />
       <Spacer {...args} />
-      <BodyText text="スペーサーで間隔を調整できます" size="base" />
+      <BodyText text="スペーサーで間隔を調整できます" />
     </div>
   ),
 }
@@ -34,9 +34,9 @@ export const LargeSpace: Story = {
   },
   render: (args) => (
     <div>
-      <TitleText text="大きなスペース" size="xl" />
+      <TitleText text="大きなスペース" />
       <Spacer {...args} />
-      <BodyText text="50pxの間隔が開いています" size="base" />
+      <BodyText text="50pxの間隔が開いています" />
     </div>
   ),
 }
@@ -47,9 +47,9 @@ export const RemUnit: Story = {
   },
   render: (args) => (
     <div>
-      <TitleText text="rem単位" size="xl" />
+      <TitleText text="rem単位" />
       <Spacer {...args} />
-      <BodyText text="2remの間隔です" size="base" />
+      <BodyText text="2remの間隔です" />
     </div>
   ),
 }
@@ -60,9 +60,9 @@ export const AutoHeight: Story = {
   },
   render: (args) => (
     <div style={{ height: '200px', display: 'flex', flexDirection: 'column' }}>
-      <TitleText text="上部コンテンツ" size="xl" />
+      <TitleText text="上部コンテンツ" />
       <Spacer {...args} />
-      <BodyText text="下部コンテンツ（auto指定で最大限のスペース）" size="base" />
+      <BodyText text="下部コンテンツ（auto指定で最大限のスペース）" />
     </div>
   ),
 }

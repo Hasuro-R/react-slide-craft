@@ -45,7 +45,7 @@ export const ImageCaption: Story = {
       }}>
         サンプル画像
       </div>
-      <CaptionText {...args} />
+      <CaptionText {...args} text="図2: 複数行にわたる\n詳細な説明文のサンプル" />
     </div>
   ),
 }

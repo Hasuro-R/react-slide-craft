@@ -17,52 +17,60 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    children: <BodyText text="フローティングコンテンツ" size="base" />,
+    children: <BodyText text="フローティングコンテンツ" />,
   },
   render: (args) => (
     <div style={{ height: '400px', position: 'relative', border: '1px solid #ccc' }}>
-      <TitleText text="メインコンテンツ" size="xl" />
-      <BodyText text="背景のメインコンテンツです。" size="base" />
-      <FloatContainer {...args} />
+      <TitleText text="メインコンテンツ" />
+      <BodyText text="背景のメインコンテンツです。" />
+      <FloatContainer {...args}>
+        {args.children}
+      </FloatContainer>
     </div>
   ),
 }
 
 export const TopRight: Story = {
   args: {
-    children: <BodyText text="右上に配置" size="sm" />,
+    children: <BodyText text="右上に配置" />,
     style: { top: '10px', right: '10px' },
   },
   render: (args) => (
     <div style={{ height: '400px', position: 'relative', border: '1px solid #ccc' }}>
-      <TitleText text="メインコンテンツ" size="xl" />
-      <FloatContainer {...args} />
+      <TitleText text="メインコンテンツ" />
+      <FloatContainer {...args}>
+        {args.children}
+      </FloatContainer>
     </div>
   ),
 }
 
 export const BottomLeft: Story = {
   args: {
-    children: <BodyText text="左下に配置" size="sm" />,
+    children: <BodyText text="左下に配置" />,
     style: { bottom: '10px', left: '10px' },
   },
   render: (args) => (
     <div style={{ height: '400px', position: 'relative', border: '1px solid #ccc' }}>
-      <TitleText text="メインコンテンツ" size="xl" />
-      <FloatContainer {...args} />
+      <TitleText text="メインコンテンツ" />
+      <FloatContainer {...args}>
+        {args.children}
+      </FloatContainer>
     </div>
   ),
 }
 
 export const Center: Story = {
   args: {
-    children: <BodyText text="中央に配置" size="base" />,
+    children: <BodyText text="中央に配置" />,
     style: { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' },
   },
   render: (args) => (
     <div style={{ height: '400px', position: 'relative', border: '1px solid #ccc' }}>
-      <TitleText text="メインコンテンツ" size="xl" />
-      <FloatContainer {...args} />
+      <TitleText text="メインコンテンツ" />
+      <FloatContainer {...args}>
+        {args.children}
+      </FloatContainer>
     </div>
   ),
 }
