@@ -1,0 +1,32 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as Container from "./Container.stories"
+
+<Meta of={Container} />
+
+# Container
+`Container`は、他のコンポーネントをラップして統一されたレイアウトを提供するコンテナコンポーネントです。
+
+## Usage
+```tsx
+import { Container } from "react-slide-craft"
+
+const MySlide = () => (
+  <Container>
+    <h1>コンテンツ</h1>
+    <p>コンテナ内に配置される内容</p>
+  </Container>
+)
+```
+
+## 特徴
+- **統一されたレイアウト**: 一貫したスタイリングとスペーシング
+- **フレキシブルなコンテンツ**: 任意の子要素を含むことが可能
+- **レスポンシブ対応**: 画面サイズに応じた適切な表示
+- **シンプルな使用方法**: childrenプロパティで簡単に使用
+
+## Props
+<Canvas>
+<Story of={Container.Default} />
+</Canvas>
+<Controls />

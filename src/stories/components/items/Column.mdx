@@ -1,0 +1,33 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as Column from "./Column.stories"
+
+<Meta of={Column} />
+
+# Column
+`Column`は、子要素を縦並びに配置するレイアウトコンポーネントです。垂直方向のレイアウト構築に使用します。
+
+## Usage
+```tsx
+import { Column } from "react-slide-craft"
+
+const MySlide = () => (
+  <Column>
+    <div>上部のコンテンツ</div>
+    <div>中央のコンテンツ</div>
+    <div>下部のコンテンツ</div>
+  </Column>
+)
+```
+
+## 特徴
+- **垂直レイアウト**: 子要素を縦並びに配置
+- **フレキシブルな配置**: justify-content、align-itemsなどの調整が可能
+- **レスポンシブ対応**: 画面サイズに応じた適切な配置
+- **簡単な使用方法**: childrenを渡すだけで縦並びレイアウトを実現
+
+## Props
+<Canvas>
+<Story of={Column.Default} />
+</Canvas>
+<Controls />

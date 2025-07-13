@@ -1,0 +1,32 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as CoverSlideTemplate from "./CoverSlideTemplate.stories"
+
+<Meta of={CoverSlideTemplate} />
+
+# CoverSlideTemplate
+`CoverSlideTemplate`は、プレゼンテーションの表紙やセクションの区切りに使用するスライドテンプレートです。シンプルでインパクトのあるレイアウトを提供します。
+
+## Usage
+```tsx
+import { CoverSlideTemplate } from "react-slide-craft"
+
+const CoverSlide = () => (
+  <CoverSlideTemplate
+    title="プレゼンテーションタイトル"
+    subtitle="サブタイトルやプレゼンター名"
+  />
+)
+```
+
+## 特徴
+- **センター配置**: タイトルとサブタイトルが画面中央に配置
+- **シンプルなレイアウト**: 重要な情報を際立たせる最小限のデザイン
+- **柔軟なテキスト**: タイトルとサブタイトルのスタイルをカスタマイズ可能
+- **レスポンシブ対応**: 画面サイズに応じて自動調整
+
+## Props
+<Canvas>
+<Story of={CoverSlideTemplate.Default} />
+</Canvas>
+<Controls />

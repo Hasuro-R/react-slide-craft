@@ -1,0 +1,32 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as QuoteText from "./QuoteText.stories"
+
+<Meta of={QuoteText} />
+
+# QuoteText
+`QuoteText`は、引用文や重要な言葉を表示するためのテキストコンポーネントです。特別なスタイリングで引用内容を際立たせます。
+
+## Usage
+```tsx
+import { QuoteText } from "react-slide-craft"
+
+const MySlide = () => (
+  <QuoteText 
+    text="素晴らしいプレゼンテーションは、シンプルで美しいスライドから始まる。" 
+    size="lg" 
+  />
+)
+```
+
+## 特徴
+- **引用スタイル**: 引用文に適したスタイリング
+- **強調表示**: `|テキスト|`記法で部分的な強調が可能
+- **視覚的区別**: 通常のテキストとは異なる見た目で引用を明確化
+- **レスポンシブ対応**: 画面サイズに応じた適切な表示
+
+## Props
+<Canvas>
+<Story of={QuoteText.Default} />
+</Canvas>
+<Controls />

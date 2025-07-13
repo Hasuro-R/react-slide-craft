@@ -1,0 +1,32 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as TitleAndBodySlideTemplate from "./TitleAndBodySlideTemplate.stories"
+
+<Meta of={TitleAndBodySlideTemplate} />
+
+# TitleAndBodySlideTemplate
+`TitleAndBodySlideTemplate`は、タイトルと本文を持つ基本的なスライドテンプレートです。プレゼンテーションで最も頻繁に使用される標準的なレイアウトを提供します。
+
+## Usage
+```tsx
+import { TitleAndBodySlideTemplate } from "react-slide-craft"
+
+const ContentSlide = () => (
+  <TitleAndBodySlideTemplate
+    title="スライドタイトル"
+    body="スライドの本文内容をここに記述します。"
+  />
+)
+```
+
+## 特徴
+- **標準レイアウト**: タイトルを上部、本文を下部に配置する一般的な構成
+- **読みやすさ重視**: 適切な余白と文字サイズで可読性を確保
+- **フレキシブルな本文**: テキスト、リスト、カスタムコンテンツに対応
+- **自動調整**: 内容に応じてレイアウトが自動調整
+
+## Props
+<Canvas>
+<Story of={TitleAndBodySlideTemplate.Default} />
+</Canvas>
+<Controls />

@@ -1,0 +1,34 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as FloatContainer from "./FloatContainer.stories"
+
+<Meta of={FloatContainer} />
+
+# FloatContainer
+`FloatContainer`は、要素を画面上の特定の位置に配置できるフローティングコンテナコンポーネントです。
+
+## Usage
+```tsx
+import { FloatContainer } from "react-slide-craft"
+
+const MySlide = () => (
+  <div>
+    <h1>メインコンテンツ</h1>
+    <FloatContainer position="top-right">
+      <p>右上に配置される内容</p>
+    </FloatContainer>
+  </div>
+)
+```
+
+## 特徴
+- **自由な配置**: 画面の任意の位置に要素を配置可能
+- **複数のポジション**: top-left、top-right、bottom-left、bottom-rightなどに対応
+- **オーバーレイ表示**: メインコンテンツの上に重ねて表示
+- **レスポンシブ対応**: 画面サイズに応じた適切な位置調整
+
+## Props
+<Canvas>
+<Story of={FloatContainer.Default} />
+</Canvas>
+<Controls />

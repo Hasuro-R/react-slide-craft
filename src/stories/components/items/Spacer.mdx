@@ -1,0 +1,35 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as Spacer from "./Spacer.stories"
+
+<Meta of={Spacer} />
+
+# Spacer
+`Spacer`は、コンポーネント間にスペースを作るためのレイアウト用コンポーネントです。スライド内の要素間隔を細かく調整できます。
+
+## Usage
+```tsx
+import { Spacer } from "react-slide-craft"
+
+const MySlide = () => (
+  <div>
+    <h1>タイトル</h1>
+    <Spacer height="20px" />
+    <p>本文</p>
+    <Spacer height="auto" />
+    <footer>フッター</footer>
+  </div>
+)
+```
+
+## 特徴
+- **柔軟なサイズ指定**: px、rem、em、%、autoなどの単位に対応
+- **シンプルな使用方法**: heightプロパティだけで簡単に間隔調整
+- **レスポンシブ対応**: 画面サイズに応じたスペース調整が可能
+- **軽量**: 最小限のコードでスペース制御を実現
+
+## Props
+<Canvas>
+<Story of={Spacer.Default} />
+</Canvas>
+<Controls />
