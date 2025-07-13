@@ -1,0 +1,36 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as SlideBase from "./SlideBase.stories"
+
+<Meta of={SlideBase} />
+
+# SlideBase
+`SlideBase`は、すべてのスライドコンポーネントで使用される基盤となるラッパーコンポーネントです。レスポンシブなスタイリングシステムとレイアウト一貫性を提供します。
+
+## Usage
+カスタムスライドテンプレートを作成する際は、必ず`SlideBase`でラップしてください。これにより、レイアウトの整合性が保たれ、レスポンシブなフォントスケーリングが適用されます。
+
+```tsx
+import { SlideBase } from "react-slide-craft"
+
+const CustomSlideTemplate = ({ children, title }) => {
+  return (
+    <SlideBase>
+      <h1>{title}</h1>
+      {children}
+    </SlideBase>
+  )
+}
+```
+
+## 特徴
+- **レスポンシブフォントシステム**: 画面サイズに応じて自動的にフォントサイズを調整
+- **一貫したレイアウト**: すべてのスライドで統一されたパディング、余白、配置
+- **ベーススタイル適用**: `SlideCore`で定義されたベーススタイルを自動適用
+- **フレキシブルレイアウト**: flexboxベースの柔軟なレイアウトシステム
+
+## Props
+<Canvas>
+<Story of={SlideBase.Default} />
+</Canvas>
+<Controls />

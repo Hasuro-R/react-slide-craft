@@ -1,0 +1,32 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as HeadlineText from "./HeadlineText.stories"
+
+<Meta of={HeadlineText} />
+
+# HeadlineText
+`HeadlineText`は、スライドの見出しや重要なメッセージを表示するための大きなテキストコンポーネントです。
+
+## Usage
+```tsx
+import { HeadlineText } from "react-slide-craft"
+
+const MySlide = () => (
+  <HeadlineText 
+    text="重要な見出し" 
+    size="4xl" 
+  />
+)
+```
+
+## 特徴
+- **大きなサイズ**: 見出しに適した大きなフォントサイズ
+- **強調表示**: `|テキスト|`記法で部分的な強調が可能
+- **レスポンシブ対応**: 画面サイズに応じたフォントサイズ調整
+- **アクセシビリティ**: 適切なセマンティクス
+
+## Props
+<Canvas>
+<Story of={HeadlineText.Default} />
+</Canvas>
+<Controls />

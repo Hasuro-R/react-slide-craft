@@ -1,0 +1,32 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as SubTitleText from "./SubTitleText.stories"
+
+<Meta of={SubTitleText} />
+
+# SubTitleText
+`SubTitleText`は、サブタイトルや副見出しを表示するためのテキストコンポーネントです。タイトルテキストより小さく、本文テキストより大きなサイズです。
+
+## Usage
+```tsx
+import { SubTitleText } from "react-slide-craft"
+
+const MySlide = () => (
+  <SubTitleText 
+    text="サブタイトル" 
+    size="xl" 
+  />
+)
+```
+
+## 特徴
+- **中間サイズ**: タイトルと本文の中間的なフォントサイズ
+- **強調表示**: `|テキスト|`記法で部分的な強調が可能
+- **セクション分け**: コンテンツの整理に適したサイズ
+- **レスポンシブ対応**: 画面サイズに応じた適切な表示
+
+## Props
+<Canvas>
+<Story of={SubTitleText.Default} />
+</Canvas>
+<Controls />

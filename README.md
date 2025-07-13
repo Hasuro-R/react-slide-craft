@@ -48,11 +48,11 @@ const App = () => {
 ## Detailed Usage
 ### Define base style for slides
 You can define a default slide style.
-You can do this by passing the slide style to `baseSlideFrameStyle` of `SlideCore` as shown below.
+You can do this by passing the slide style to `baseSlideStyle` of `SlideCore` as shown below.
 ```tsx
 <SlideCore
   slides={slides}
-  baseSlideFrameStyle={
+  baseSlideStyle={
     textColor="black"
     backgroundColor="white"
     padding="20 25"
@@ -124,6 +124,12 @@ const App = () => {
 ### Items
 - List
 - CustomText
+- Spacer
+- Image
+- Container
+- FloatContainer
+- Row
+- Column
 
 ### Texts
 - HeadlineText

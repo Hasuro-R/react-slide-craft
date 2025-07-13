@@ -1,0 +1,35 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as CaptionText from "./CaptionText.stories"
+
+<Meta of={CaptionText} />
+
+# CaptionText
+`CaptionText`は、画像のキャプションや補足説明などの小さなテキストを表示するためのコンポーネントです。
+
+## Usage
+```tsx
+import { CaptionText } from "react-slide-craft"
+
+const MySlide = () => (
+  <div>
+    <img src="image.jpg" alt="サンプル画像" />
+    <CaptionText 
+      text="図1: サンプル画像の説明" 
+      size="sm" 
+    />
+  </div>
+)
+```
+
+## 特徴
+- **小さなサイズ**: キャプションに適した控えめなフォントサイズ
+- **補足情報**: メインコンテンツの補足説明に最適
+- **強調表示**: `|テキスト|`記法で部分的な強調が可能
+- **読みやすさ**: 適切なコントラストで視認性を確保
+
+## Props
+<Canvas>
+<Story of={CaptionText.Default} />
+</Canvas>
+<Controls />

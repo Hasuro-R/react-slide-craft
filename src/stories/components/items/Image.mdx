@@ -1,0 +1,36 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as Image from "./Image.stories"
+
+<Meta of={Image} />
+
+# Image
+`Image`は、スライド内で画像を表示するためのコンポーネントです。レスポンシブ対応とサイズ制御機能を持ちます。
+
+## Usage
+```tsx
+import { Image } from "react-slide-craft"
+
+const MySlide = () => (
+  <div>
+    <Image
+      src="/path/to/image.jpg"
+      alt="画像の説明"
+      width="300px"
+      height="200px"
+    />
+  </div>
+)
+```
+
+## 特徴
+- **レスポンシブ表示**: 画面サイズに応じて適切にサイズ調整
+- **アスペクト比維持**: 元の画像比率を保持しながらサイズ変更
+- **柔軟なサイズ指定**: width、heightを様々な単位で指定可能
+- **アクセシビリティ**: alt属性による適切な画像説明
+
+## Props
+<Canvas>
+<Story of={Image.Default} />
+</Canvas>
+<Controls />

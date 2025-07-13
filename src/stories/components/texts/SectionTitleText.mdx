@@ -1,0 +1,32 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as SectionTitleText from "./SectionTitleText.stories"
+
+<Meta of={SectionTitleText} />
+
+# SectionTitleText
+`SectionTitleText`は、セクションやチャプターのタイトルを表示するためのテキストコンポーネントです。コンテンツの区分けに使用されます。
+
+## Usage
+```tsx
+import { SectionTitleText } from "react-slide-craft"
+
+const MySlide = () => (
+  <SectionTitleText 
+    text="第1章: はじめに" 
+    size="2xl" 
+  />
+)
+```
+
+## 特徴
+- **セクション表示**: 章やセクションに適したフォントサイズ
+- **強調表示**: `|テキスト|`記法で部分的な強調が可能
+- **構造化**: コンテンツの階層構造を明確に表現
+- **統一感**: 一貫したセクションタイトルのスタイル
+
+## Props
+<Canvas>
+<Story of={SectionTitleText.Default} />
+</Canvas>
+<Controls />
