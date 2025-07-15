@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.4.0
+
+### Minor Changes
+
+- [#105](https://github.com/Hasuro-R/react-slide-craft/pull/105) [`b420cc3`](https://github.com/Hasuro-R/react-slide-craft/commit/b420cc35d822b8b8c4a175bd67811a91a8e8e860) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Replace to peerDependencies
+
 ## 1.3.4
 
 ### Patch Changes
