@@ -38,6 +38,10 @@
     "changeset-version": "changeset version",
     "changeset-publish": "changeset publish"
   },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.4",
