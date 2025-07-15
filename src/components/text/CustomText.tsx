@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import { useFontSize } from "../../hooks/useFontSize"
 import { ParseText } from "./ParseText"

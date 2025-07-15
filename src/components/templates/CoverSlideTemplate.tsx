@@ -1,3 +1,5 @@
+"use client"
+
 import { useFontSize } from "../../hooks/useFontSize"
 import { SlideBase, SlideBaseCoreProps } from "../core"
 import { HeadlineText } from "../text"
