@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.5.0
+
+### Minor Changes
+
+- [#108](https://github.com/Hasuro-R/react-slide-craft/pull/108) [`585aa46`](https://github.com/Hasuro-R/react-slide-craft/commit/585aa46fe79b7ce811fc102af794967713fadf1d) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Adapt ClientComponent
+
 ## 1.4.0
 
 ### Minor Changes
