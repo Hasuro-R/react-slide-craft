@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import { Container, ContainerBaseProps } from "./Container"
 import { useFontSize } from "../../hooks/useFontSize"

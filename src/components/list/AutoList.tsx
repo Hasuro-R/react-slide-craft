@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useRef, useState } from "react"
 import { useFontSize } from "../../hooks/useFontSize"
 import { HighlightTextProps, ParseText } from "../text"

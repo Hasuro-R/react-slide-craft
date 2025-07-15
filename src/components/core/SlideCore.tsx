@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState, JSX } from "react"
 import { isMobile } from "react-device-detect"
 import { SlideButton } from "../button"

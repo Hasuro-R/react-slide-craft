@@ -1,3 +1,5 @@
+"use client"
+
 import { JSX } from "react"
 import { Align, Column } from "../container"
 import "./index.css"
