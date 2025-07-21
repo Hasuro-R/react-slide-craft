@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.6.0
+
+### Minor Changes
+
+- [#112](https://github.com/Hasuro-R/react-slide-craft/pull/112) [`5e172e4`](https://github.com/Hasuro-R/react-slide-craft/commit/5e172e4244befcc60d4d5d3368b81365170b7103) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Create Slideblock Component
+
 ## 1.5.0
 
 ### Minor Changes
