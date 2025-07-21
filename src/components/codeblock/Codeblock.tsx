@@ -13,6 +13,8 @@ export type CodeblockProps = {
   language?: CodeblockLanguagesType | undefined
   theme?: CodeblockThemeType | undefined
   windowControlStyle?: WindowControlStyleType | undefined
+  width?: string
+  height?: string
   fontSize?: string
   cornerRadius?: string
   dropShadow?: boolean
@@ -26,6 +28,8 @@ export const Codeblock = (props: CodeblockProps) => {
     language,
     theme = "vs",
     windowControlStyle = "default",
+    width = "auto",
+    height = "auto",
     fontSize = "base",
     cornerRadius = "5px",
     dropShadow = true,
@@ -37,6 +41,8 @@ export const Codeblock = (props: CodeblockProps) => {
     <div
       className="codeblock-cn"
       style={{
+        width: width,
+        height: height,
         borderRadius: fs(cornerRadius),
         boxShadow: dropShadow ? `0 ${fs("1rem")} ${fs("4rem")} rgba(0, 0, 0, 0.55)` : "none",
       }}
@@ -48,6 +54,8 @@ export const Codeblock = (props: CodeblockProps) => {
         language={language}
         style={getCodeblockTheme(theme)}
         customStyle={{
+          width: "100%",
+          height: "100%",
           fontSize: fs(fontSize),
           padding: `${fs("18px")} ${fs("12px")}`,
           paddingTop: windowControlStyle === "none" ? "18px" : fs("3rem")
