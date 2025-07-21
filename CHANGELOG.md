@@ -1,5 +1,11 @@
 # react-slide-craft
 
+## 1.6.1
+
+### Patch Changes
+
+- [#115](https://github.com/Hasuro-R/react-slide-craft/pull/115) [`da1e55d`](https://github.com/Hasuro-R/react-slide-craft/commit/da1e55d24806e6dbfeb6e600688ebfb07b6b86bb) Thanks [@Hasuro-R](https://github.com/Hasuro-R)! - Hotfix export codeblock
+
 ## 1.6.0
 
 ### Minor Changes
