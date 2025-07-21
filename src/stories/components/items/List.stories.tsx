@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { List } from "../../components"
+import { List } from "../../../components"
 
 const items = [
   "I am HASURO.",
