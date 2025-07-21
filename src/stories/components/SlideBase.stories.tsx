@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { SlideBase } from '../../../components/core/SlideBase'
-import { TitleText } from '../../../components/text/TitleText'
-import { BodyText } from '../../../components/text/BodyText'
+import { SlideBase } from '../../components/core/SlideBase'
+import { TitleText } from '../../components/text/TitleText'
+import { BodyText } from '../../components/text/BodyText'
 
 const meta: Meta<typeof SlideBase> = {
   title: 'Components/Core/SlideBase',

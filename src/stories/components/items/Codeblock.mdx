@@ -1,0 +1,131 @@
+import { Canvas, Story, Markdown, Controls, Meta } from '@storybook/addon-docs/blocks'
+
+import * as Codeblock from "./Codeblock.stories"
+
+<Meta of={Codeblock} />
+
+# Codeblock
+`Codeblock`は、スライド内でソースコードを美しく表示するためのコンポーネントです。シンタックスハイライト機能と豊富なカスタマイズオプションを提供します。
+
+## Usage
+```tsx
+import { Codeblock } from "react-slide-craft"
+
+const MySlide = () => (
+  <div>
+    <Codeblock
+      language="javascript"
+      theme="dracula"
+    >
+      {`function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}`}
+    </Codeblock>
+  </div>
+)
+```
+
+## 特徴
+- **185の言語サポート**: JavaScript、Python、TypeScript、Java、C++など幅広い言語をサポート
+- **87のテーマ**: ダークテーマからライトテーマまで豊富なカラーテーマ
+- **ウィンドウコントロール**: macOSライクなウィンドウコントロールを表示可能
+- **カスタムスタイリング**: フォントサイズ、角丸、シャドウなどを自由に調整
+- **レスポンシブ**: スライドのサイズに応じて適切にスケーリング
+
+## サポート言語（一部）
+- **Web技術**: JavaScript, TypeScript, HTML, CSS, JSON, YAML
+- **プログラミング言語**: Python, Java, C++, C#, Go, Rust, Swift
+- **スクリプト言語**: Bash, PowerShell, Ruby, PHP
+- **データベース**: SQL, PostgreSQL
+- **マークアップ**: Markdown, XML
+- **設定ファイル**: Docker, Nginx, Apache
+
+## 人気のテーマ
+- **ダークテーマ**: `dracula`, `atomOneDark`, `gruvboxDark`, `nord`, `monokai`
+- **ライトテーマ**: `github`, `atomOneLight`, `vs`, `tomorrow`
+- **特色あるテーマ**: `synthwave84`, `shadesOfPurple`, `nightOwl`
+
+## Props
+<Canvas>
+<Story of={Codeblock.Default} />
+</Canvas>
+<Controls />
+
+## Examples
+
+### JavaScript with Dracula Theme
+<Canvas>
+<Story of={Codeblock.JavaScript} />
+</Canvas>
+
+### TypeScript with Dark Theme
+<Canvas>
+<Story of={Codeblock.TypeScript} />
+</Canvas>
+
+### Python with Monokai Theme
+<Canvas>
+<Story of={Codeblock.Python} />
+</Canvas>
+
+### HTML with GitHub Theme
+<Canvas>
+<Story of={Codeblock.HTML} />
+</Canvas>
+
+### JSON with VS Theme
+<Canvas>
+<Story of={Codeblock.JSON} />
+</Canvas>
+
+## ウィンドウコントロールのバリエーション
+
+### デフォルトウィンドウコントロール
+<Canvas>
+<Story of={Codeblock.Default} />
+</Canvas>
+
+### 透明ウィンドウコントロール
+<Canvas>
+<Story of={Codeblock.TransparencyWindowControls} />
+</Canvas>
+
+### ウィンドウコントロールなし
+<Canvas>
+<Story of={Codeblock.NoWindowControls} />
+</Canvas>
+
+## カスタムスタイリング
+
+### カスタム角丸
+<Canvas>
+<Story of={Codeblock.CustomCornerRadius} />
+</Canvas>
+
+### ドロップシャドウなし
+<Canvas>
+<Story of={Codeblock.NoDropShadow} />
+</Canvas>
+
+## コード長のバリエーション
+
+### 短いコード
+<Canvas>
+<Story of={Codeblock.ShortCode} />
+</Canvas>
+
+### 長いコード
+<Canvas>
+<Story of={Codeblock.LongCode} />
+</Canvas>
+
+## 使用上の注意
+- `children`にはコードを文字列として渡してください
+- テンプレートリテラル（`` `code` ``）を使用することで複数行コードを簡潔に記述できます
+- `language`プロパティを正しく設定することで、適切なシンタックスハイライトが適用されます
+- `useFontSize`フックにより、フォントサイズは自動的にスライドサイズに調整されます
+
+## パフォーマンス
+- react-syntax-highlighterを使用しているため、大きなコードファイルの場合はパフォーマンスに注意してください
+- 長いコードの場合は、必要な部分のみを抜粋することを推奨します
