@@ -44,11 +44,11 @@ const App = () => {
 ## 詳しい使い方
 ### スライドのベーススタイルを定義
 デフォルトのスライドスタイルを定義できます。
-下記のように`SlideCore`の`baseSlideFrameStyle`へスライドのスタイルを渡すことで可能です。
+下記のように`SlideCore`の`baseSlideStyle`へスライドのスタイルを渡すことで可能です。
 ```tsx
 <SlideCore
   slides={slides}
-  baseSlideFrameStyle={
+  baseSlideStyle={
     textColor="black"
     backgroundColor="white"
     padding="20 25"
@@ -107,6 +107,7 @@ const App = () => {
 
 ## Components
 Componentsの詳細は[こちらから](https://hasuro-r.github.io/react-slide-craft/?path=/docs/components-slidecore--docs)
+
 ### Core
 - SlideCore
 - SlideBase
@@ -119,6 +120,13 @@ Componentsの詳細は[こちらから](https://hasuro-r.github.io/react-slide-c
 ### Items
 - List
 - CustomText
+- Spacer
+- Image
+- Container
+- FloatContainer
+- Row
+- Column
+- Codeblock
 
 ### Texts
 - HeadlineText
